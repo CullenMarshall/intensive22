@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+</head>
+<body>
+<h3>Bank</h3>
+    <form>
+        <label>* Customer Type: </label>
+        <label for="goodcusttype">Good Customer</label><input type="radio" name="customer" id="custtype">
+        <label for="badcusttype">Bad Customer</label><input type="radio" name="customer" id="custtype">
+        <br>
+        <br>
+        <br>
+        <br>
+        <label for="name">Name </label><input type="text" placeholder="write your stupid name" id="name" required>
+        <br>
+        <br>
+        <label for="birthday">Birthday </label><input type="date" placeholder="how old are you" id="birthday" required>
+        <br>
+        <br>
+        <label for="email">Enter Email: </label> 
+        <input type="text" id="email" name="email">@
+        <select name="email" id="email" required>
+            <option value="gmail">gmail.com</option>
+            <option value="aol">aol.com</option>
+            <option value="naver">naver.com</option>
+            <option value="yahoo">yahoo.com</option>
+        </select>
+        <br>
+
+        <br>
+        <label for="contact">Phone </label>
+            <select id="contact">
+                <option selected>Cell Phone</option>
+                <option>Home Phone</option>
+                <option>Beeper</option>
+                <option>Carrier Pigeons</option>
+            </select>
+            <select id="area code">
+                <option>010</option>
+                <option>020</option>
+                <option>911</option>
+                <option>119</option>
+            </select>
+            <input type="text" min="4"max="4" required>
+            <input type="text" min="4"max="4"required>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <label for="important">Details</label>
+            <textarea id="important" readonly name="write something important" cols="100" rows="10" placeholder="In order to process your consultation, we require your consent to the following in accordance with Article 15, Paragraph 1 and Article 24, Paragraph 1 of the Personal Information Protection Act.
+
+            1. Purpose of collection and use of personal information:
+            identification of person to process consultation work according to use of service, confirmation of intention, and notification of consultation results
+            2. Items of personal information collected
+            [name, date of birth, e-mail address, phone number, e-mail inquiry content]
+            3. Period of retention and use of personal information
+            The above personal information is retained and used for the above purposes for 5 years from the end of processing after consent to collection and use.
+            However, after the (financial) transaction end date, it is retained and used only for financial accident investigation, dispute resolution, civil complaint processing, fulfillment of statutory obligations, and the Bank's risk management work.
+            4. Customers have the right to refuse the collection and use of personal information, and consultation may be refused if the right is exercised.
+            "></textarea><br>
+            <label for="agree">Yes I agree</label><input type="radio" id="agree" name="agree">
+            <label for="agree">Do Not Agree</label><input type="radio" id="agree" name="agree">
+
+
+            <br>
+            <br>
+            <br>
+            <label for="Services">What do you want from us?</label>
+            <select name="Services" id="Services">
+                <option selected>Choose.</option>
+                <option value="Loan">Loan</option>
+                <option value="Deposit">Deposit</option>
+                <option value="Exchange">Money Exchange</option>
+                <option value="dirtymoney">Money Laurdering</option>
+                <option value="money">Straight Cash Homie!</option>
+            </select>
+            <br>
+            <br>
+            <br>
+            <label for="sign">Sign Your name Here </label><input id="sign" type="text">
+            <br>
+            <br>
+
+            <label for="important">Details</label>
+            <textarea id="important" name="write something important" cols="100" rows="10" placeholder="legal jargon here"></textarea>
+            <br>
+            <br>
+            <br>
+            <center>
+                 <button><a name="die" value="die" href="https://www.costco.co.kr/">Die</a></button>
+                 <input type="submit" name="Submit" value="Submit">
+               
+            </center>
+
+
+
+    </form>
+</body>
+</html>
