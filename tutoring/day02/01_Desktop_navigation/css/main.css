@@ -7,3 +7,34 @@
 /* Logo and links hover: #0460BC */
 /* Cart bg color: #C3CCD7 */
 /* Cart hover: #B5C0CE */
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+ }
+ header {
+    background-color:#DBE1E8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ h1 {
+    color: #0460BC;
+    padding: 0;
+     }
+
+ ul {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    display: flex;
+    gap:10px;
+    
+ }
+
+ a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px; 
+
+ }
