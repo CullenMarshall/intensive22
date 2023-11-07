@@ -1,0 +1,172 @@
+<!-- Internal Styles (HTML <style> tag) 
+        - internal means inside your HTML 
+        -located in the head
+        -holds same information as inline stlye tag
+        -makes it easier if you have multiple elements that have the same attributes-->
+
+<!-- Simple Selectors (
+    universal:* allows you to select everything 
+    type: (see span) allow you to type a type of an element and do any type of thing you type 
+    class:-(see header) use .
+    id: you create an id and use it to edit your elements
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styles and Selectors</title>
+    <style>
+        @font-face {
+            font-family: "PermanentMarker";
+            src: url(../fonts/PermanentMarker-Regular.ttf);
+        }
+        .header{
+            
+            background-image: url(../CullenSelfPractice/images/backimage.jpg);
+            width: 100%vw;
+            background-size: contain;
+            justify-content: center;
+        }
+
+        h1{
+            font-family: "PermanentMarker";
+            text-align: center;
+            font-size: 100px;
+            color:orange
+        }
+        #list1{
+            display: flex;
+            display: inline-flex;
+            list-style: none;
+            gap:100px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 50px;
+        }
+        header{
+             display: flex;
+            justify-content: space-around;
+             align-items: center;    
+             width: 100%vw;
+            height: 100%vw;
+        }
+        #toppic{ 
+            /* Use a # then the name of the id */
+        width: 100%;
+        display: inline-flex
+        
+        }
+        #famous{
+            font-family: "PermanentMarker";
+            font-weight: 200;
+        }
+        a{
+            text-decoration: none;
+        }
+        p{
+            font-size: larger;
+            font-family: 'Times New Roman', Times, serif;
+        }
+       body{
+        background-color: bisque;
+       }
+      
+       *{ 
+        color:limegreen
+       } 
+       h2{
+        font-family: "PermanentMarker";
+        color: tomato;
+       }
+ 
+        span{ 
+        background-color: tomato;
+        }
+
+
+    </style>
+</head> 
+<header>
+    <div class="header"> <h1>Geo Metro Aficionado</h1></div>
+</header>
+    <nav>
+        <ul id="list1">
+            <li><a href="#">For Sale</a></li>
+            <li><a href="#">Marriage Applications</a></li>
+            <li><a href="#">DUI Lawyers</a></li>
+            <li><a href="#">Parts/Repair Shops</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+<body>
+    
+        <div id="toppic">
+            
+            <div>
+                <h2>Metro is Life</h2>
+                    <p>Dude, the Geo Metro, it was like the magic carpet of cars, you know? These little shitmobiles have a vibe of its own. When you pulled up to the beach in that thing, it was
+                    like, "Whoa, check out the dude with the Metro!"
+                    
+                    The ladies, man, they were all about it. It might've been small, but It was economical,and nothing is more sexy than having a few 
+                    extra bucks for tacos and meth. And it didn't matter that it wasn't a metal deathtrap, the Metro had its own
+                    groove. Every dude knew, if you drove a metro, you probably had a gun. This site is dedicated to the memories of Geo Metros.</p>
+            <div><img style="width: 300px;" src="../CullenSelfPractice/images/Geo2.jpg" alt="another beast"></div>
+            </div>
+            <div><img src="../CullenSelfPractice/images/Geo1.jpg" alt="sexy beast"></div>
+        </div>
+    </div>
+    
+    <div>
+        <h2>Famous People Who Drove a Metro</h2>
+            <Ul id="famous">
+                <Li><a href="https://en.wikipedia.org/wiki/Shaquille_O%27Neal">Shaq</a></Li>
+                <Li><a href="https://en.wikipedia.org/wiki/Stone_Cold_Steve_Austin">Stone Cold Steve Austin</a></Li>
+                <Li><a href="https://en.wikipedia.org/wiki/Wayne_Newton">Wayne Newton</a></Li>
+                <Li><a href="https://en.wikipedia.org/wiki/The_Notorious_B.I.G.">The Notorious B.I.G.</a></Li>
+                <Li><a href="https://en.wikipedia.org/wiki/Pamela_Anderson">Pamela Anderson</a></Li>
+            </Ul>
+    </div>
+
+    <div id="history">
+        <h2>Histroy of the Geo Metro</h2>
+        <p>I must say, the Geo Metro, a humble and unassuming automobile, emerged onto the world stage in the latter half of the
+        20th century. It was the product of a time when the world, still reeling from the tumultuous events of the past, yearned
+        for economical and practical solutions to the challenges of a new era.</p>
+        
+       <p> The Geo Metro, a product of collaboration between General Motors, Suzuki, and CAMI Automotive, was a paragon of fuel
+        efficiency and frugality. Introduced in 1989, it promised a respite from the profligate excesses of the automotive
+        industry and echoed the virtues of thrift and practicality.</p>
+        
+        <p>This diminutive automobile, with its compact dimensions and efficient engine, symbolized a break from the past. It was a
+        car born from necessity, designed to tackle the rising fuel costs and environmental concerns of the time. The Geo Metro
+        was a vision of a world in transition, where sustainability and economy became the clarion call.</p>
+
+        <img src="/CullenSelfPractice/images/Geo3.jpg">
+        
+        <p>Though often criticized for its lack of power and modest design, the Geo Metro carved its own niche in history. It was a
+        symbol of resilience, a testimony to the human spirit's ability to adapt and thrive in challenging circumstances. The
+        car persevered through an era of changing values and expectations, providing an affordable and accessible mode of
+        transportation for countless individuals.</p>
+        
+        <p>The Geo Metro's legacy is one of pragmatism, a reflection of an age when simplicity and utility were virtues. In its own
+        way, it contributed to the larger narrative of the automotive industry, demonstrating the adaptability and ingenuity
+        that have been the hallmarks of human progress.</p>
+        
+        <p>As the annals of history are filled with the grand exploits and monumental achievements of great men and nations, let us
+        not forget the humble Geo Metro—a steadfast companion on the journey of modernity. Its story is a testament to the
+        endurance of practicality and the indomitable spirit of human innovation.- <span style="font-weight: bolder;">Winston Churchill</span> <span style="font-size:small;">-on the Geo Metro</span<></p>
+    </div>
+        
+        <div style="position: absolute;"><h2>Sexy Cars</h2>
+            <div style="position: relative;">
+            <img src="../CullenSelfPractice/images/Geo4.jfif">
+            <img src="../CullenSelfPractice/images/geo5.jpg">
+            <img src="../CullenSelfPractice/images/geo7.jpg">
+            <img src="../CullenSelfPractice/images/Geo6.jpg">
+
+        </div>
+    </div>
+</body>
+</html>

@@ -11,3 +11,77 @@
 
 /* Width of the arrow */
 /* 18px */
+
+body {
+    background-color: #20262C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.granddaddy {
+
+    width: 600px;
+
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.parent {
+    display: flex-start;
+    justify-content: left;
+    justify-content: space-evenly;
+    /* width: 500px; */
+    padding: 20PX;
+    background-color: #2F3740;
+    border-radius: 35px;
+    flex-wrap: wrap;
+
+
+
+}
+
+
+.buildingpic {
+    object-fit: cover;
+    border-radius: 35px;
+    margin: 10px;
+
+}
+
+.greentag {
+    color: limegreen;
+    border: 1px #455260;
+    background-color: #455260;
+    width: 75px;
+    border-radius: 5px;
+    padding: 6px;
+    text-align: center;
+}
+
+.mainshit {
+    color: whitesmoke;
+    font-size: 75px;
+
+
+}
+
+.view {
+    text-decoration: none;
+    color: #B1C4D9;
+    margin: 20px;
+
+}
+
+.arrow {
+    width: 18px;
+}
+
+.mainpic {
+    border-radius: 35px;
+    max-width: 100%;
+}

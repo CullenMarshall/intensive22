@@ -3,3 +3,29 @@
 
 /* Colors */
 /* Accent color: #07801E */
+body {
+    padding: 35px;
+}
+
+#foodforthought {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 3em;
+}
+
+/* .container { */
+
+
+/* } */
+
+.imagesbox {
+    display: flex;
+    gap: 1em;
+
+}
+
+.food {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}

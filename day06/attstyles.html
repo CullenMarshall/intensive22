@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector</title>
+    <style>
+    form {
+        width:900px;
+        text-align:center;
+    }
+    fieldset{
+        width:50%;
+        margin: auto;
+    }
+    /* [type="radio"]{ 
+        
+    }*/
+    [id*="sex"]{
+        color:yellow;
+
+    }"
+    </style> 
+</head>
+<body>
+    <form>
+        <label for="firstname">Name</label><input id="firstname" type="text">
+        <label for="lastname">Last Name</label><input id="lastname" type="text">
+        <label for="nickname">Nickname</label><input id="nickname" type="text">
+        <label for="suffix">Suffix</label><select>    
+            
+                        <option>Jr</option>
+                        <option>Sr</option>
+                        <option>MD</option>
+                        <option>I</option>
+                        <option>II</option>
+                        <option>III</option>
+             </select> 
+        
+
+    <fieldset>
+        <Legend>Sex</Legend>
+        <label for="sex1">Yes</label><input id="sex1" type="radio" name="sex1">
+        <label for="sex2">NO</label><input id="sex2" type="radio" name="sex2">
+        <label for="GEO">Geo Metro</label><input id="GEO" type="radio" name="GEO">
+    </fieldset>
+    <label for="coffee">Coffee</label><input type="checkbox" id="coffee">
+    </form>
+</body>
+</html>

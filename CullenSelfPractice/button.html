@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            color: orangered;
+
+        }
+
+        .outer {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            text-align: center;
+
+        }
+
+        .glow {
+            display: inline-block;
+            margin-top: 100px;
+            text-align: center;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid orangered;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        :hover {
+            box-shadow: 0 0 20px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="glow">Push</div>
+        <div class="glow">Pull</div>
+    </div>
+</body>
+
+</html>

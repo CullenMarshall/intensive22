@@ -1,0 +1,62 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 4em;
+}
+
+/* Thai Flag */
+
+.red {
+   background-color: red;
+   height: 75px;
+
+}
+
+.white {
+   background-color: white;
+   height: 75px;
+}
+
+.blue {
+   background-color: blue;
+   height: 150px;
+}
+
+.flag-container {
+   box-shadow: 10px 10px 10px gray;
+   position: relative;
+
+}
+
+.flag-container:hover {
+   transform: rotateY(360deg);
+}
+
+/* Laos Flag */
+.laos {
+   box-shadow: 10px 10px 10px gray;
+}
+
+
+.red-laos {
+   height: 75px;
+   background-color: red;
+
+}
+
+.white-laos {
+   background-color: white;
+   border-radius: 50%;
+   text-align: center;
+   height: auto;
+   z-index: 999;
+
+}
+
+.blue-laos {
+   height: 150px;
+   background-color: blue;
+
+}

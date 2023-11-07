@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            color: orangered;
+
+        }
+
+        a {
+            margin-top: 40px;
+            display: inline-block;
+            cursor: url(../CullenSelfPractice/images/Geo7.jpg);
+        }
+
+        .outer {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            text-align: center;
+
+        }
+
+        .glow {
+            display: inline-block;
+            margin-top: 100px;
+            text-align: center;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid orangered;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .glow:hover {
+            box-shadow: 0 0 20px 10px;
+        }
+
+        .lower {
+            color: greenyellow;
+            margin-left: 30px;
+            border: 1px solid yellowgreen
+        }
+
+        .lower:hover {
+            box-shadow: 0 0 20px 10px yellowgreen;
+        }
+
+        :link {
+            color: orangered;
+
+        }
+
+        :visited {
+            color: yellowgreen;
+        }
+
+        :active {
+            color: pink;
+        }
+
+        .lower:first-child {
+            border: 1px solid cyan;
+        }
+
+        .lower:last-child {
+            color: whitesmoke;
+            border: 1px solid whitesmoke;
+        }
+
+        input::placeholder {
+            font-weight: bold;
+
+        }
+
+        /* li::marker{
+          makes the list dot different
+
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="glow">Push</div>
+        <div class="glow">Pull</div>
+
+
+        <div>
+            <div class="glow lower">Marry</div>
+            <div class="glow lower">Fuck</div>
+            <div class="glow lower">Kill</div>
+        </div>
+        <a href="https://en.wikipedia.org/wiki/Stone_Cold_Steve_Austin">Stone Cold Steve Austin</a>
+    </div>
+
+
+</body>
+
+</html>
