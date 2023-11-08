@@ -1,0 +1,42 @@
+body {}
+
+.granddaddy {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 950px;
+    border: 3px solid red;
+}
+
+.burger {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    ;
+
+}
+
+.Burgerwords {
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    font-family: sans-serif;
+    font-weight: 900;
+
+}
+
+a {
+    text-decoration: none;
+}
