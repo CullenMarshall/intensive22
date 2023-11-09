@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <style>
+        body>div {
+            margin-bottom: 70px;
+        }
+
+        .flexed {
+            display: flex;
+        }
+
+        .flexed>div {
+            width: 150px;
+            height: 150px;
+        }
+
+        .inline div {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flexed">
+        flexed
+        <div style="background-color: bisque;"></div>
+        <div style="background-color: chartreuse;"></div>
+        <div style="background-color: darkorange;"></div>
+    </div>
+    <br>
+    <div class="inline">
+        inline
+        <div style="background-color: bisque;"></div>
+        <div style="background-color: chartreuse;"></div>
+        <div style="background-color: darkorange;"></div>
+    </div>
+    <style>
+        .morecontent div {
+            display: inline-block;
+            width: 200px;
+            height: 150px;
+            background-color: plum;
+
+        }
+
+        .morecontent span {
+            background-color: orange;
+        }
+
+        /* .morecontent div:first-child .morecontent div:nth-child(2) {
+            margin-bottom: 4px;
+        } */
+    </style>
+    <div class="morecontent">
+        <!-- grid of 2x2 -->
+        <div><span>Random words Today I came to wcoding early and I regret that.</span></div>
+        <div><span>Random words Today I came to wcoding early and I regret that.</span></div>
+        <div><span>Random words Today I came to wcoding early and I regret that.</span></div>
+        <div><span>Random words Today I came to wcoding early and I regret that.</span></div>
+
+    </div>
+    <style>
+        .row {
+            display: flex;
+            width: 200px;
+            height: 150px;
+            background-color: plum;
+
+        }
+
+        .morecontent2 span {
+            background-color: orange;
+        }
+    </style>
+    <div class="morecontent2">
+        <!-- grid of 2x2 -->
+
+        <div class="row">
+            <div><span>Random words Today I came to wcoding early and I regret that.</span></div>
+            <div><span>Random words Today I came to wcoding early and I regret that.</span></div>
+        </div>
+        <div class="row">
+            <div><span>Random words Today I came to wcoding early and I regret that.</span></div>
+            <div><span>Random words Today I came to wcoding early and I regret that.</span></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
