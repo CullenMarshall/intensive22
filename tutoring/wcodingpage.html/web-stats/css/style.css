@@ -1,0 +1,128 @@
+/* wcoding lavender color */
+/* #8658C8  background #0A0A18*/
+
+body {
+    margin: 0;
+    background-color: #0A0A18;
+    color: antiquewhite;
+
+}
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.outtercontainer {
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.logo {
+    text-align: center;
+
+}
+
+.logo img {
+    width: 300px;
+}
+
+
+.logo img:hover {
+    animation: rotateAnimation 0.5s ease-in-out;
+}
+
+@keyframes rotateAnimation {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 64px;
+    font-family: monospace;
+
+}
+
+
+.currentvisitors {
+    display: flex;
+    flex-direction: column;
+    background-color: #8658C8;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 3px 3px 3px#6c6c6c;
+
+}
+
+.currentvisitors span:hover {
+    transform: scale(110%);
+
+}
+
+.currentvisitors span {
+    font-size: 64px;
+    font-weight: 900;
+}
+
+.currentvisitors p {
+    font-size: 16px;
+}
+
+.lowerboxes {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+
+.midbox img {
+    height: 40px;
+    width: 40px;
+}
+
+
+.midbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    padding: 0 20px;
+    box-shadow: 2px 2px 2px#6c6c6c;
+}
+
+.pageviews,
+.visitors {
+    display: flex;
+    gap: 15px;
+
+}
+
+
+.button {
+    width: 200px;
+
+}
+
+button {
+    background-color: #8658C8;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 2px 2px 2px#6c6c6c;
+}
+
+button:hover {
+    transform: scale(110%);
+    box-shadow: 10px 5px 5px #8658C8;
+}
+
+.note {}

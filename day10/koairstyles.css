@@ -1,0 +1,397 @@
+/* blue:  rgb(0, 37, 108)
+    white rgb(255, 255, 255) */
+
+
+* {
+
+    @font-face {
+        font-family: "Nato Sans";
+        src: url('https://fonts.googleapis.com/css2?family=Fascinate&family=Noto+Sans+KR:wght@700&display=swap');
+    }
+
+    ;
+
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+}
+
+html,
+body {
+    box-sizing: border-box;
+    font-size: 10px;
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow: scroll;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.granddaddy {
+    width: 100%;
+    max-width: 930px;
+    min-width: 680;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../day10/planebackground);
+    background-repeat: no-repeat;
+}
+
+.gdheader {
+    background-color: rgb(255, 255, 255);
+}
+
+.headercontainer {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+.headicons {
+    display: flex;
+    text-align: center;
+    justify-content: right;
+    padding-top: 1rem;
+}
+
+.logo img {
+    width: 13.2rem;
+    height: 4.4rem;
+}
+
+.headicons img,
+.headicons button {
+    width: 100%;
+    line-height: 1.7rem;
+    min-width: 4.4rem;
+}
+
+.headicons button {
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 0.3rem 1rem 0.4rem;
+    border-radius: 1.5rem;
+    word-break: break-word;
+    background-color: rgb(0, 37, 108);
+    cursor: pointer;
+    outline: 0;
+    display: block;
+
+}
+
+.maincontent {
+    width: 80%;
+    height: 90%;
+    max-width: 132.8rem;
+    padding: 2rem;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.bookflights {
+    background-color: #65728a;
+    display: flex;
+    width: 100%;
+}
+
+.booktab {
+    flex: auto;
+    width: 25%;
+    vertical-align: middle;
+    background-color: #65728a;
+    font-size: 2rem;
+    word-break: break-word;
+    margin: 0;
+}
+
+.booktab button {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.45;
+    cursor: pointer;
+    appearance: none;
+}
+
+.booktab button:hover {
+    background-color: #fff;
+    color: #65728a;
+}
+
+.bookbuttonparent {
+    line-height: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonforbooking {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem;
+    width: 100%;
+}
+
+h2 {
+    display: none;
+}
+
+/* 
+@media screen {
+    .bookflights{
+        display: none;
+    }
+    h2 {
+    display: flex;
+}
+} */
+.buttonforbooking button {
+    border-radius: 6rem;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: #fff;
+
+}
+
+.bookbuttonparent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    background-color: #fff;
+    border-radius: 6rem;
+    min-height: 100%;
+    min-width: 4.4rem;
+    line-height: 1.35;
+    border: .1rem solid rgb(0, 37, 108);
+
+
+}
+
+.bookbuttonparent li {
+    display: inline;
+    padding: 3rem;
+
+}
+
+.centerbookbutton1 button {
+    border-radius: 6rem;
+    font-size: 1.6rem;
+    background-color: rgb(0, 37, 108);
+    border: transparent;
+    color: #fff;
+    padding: 1rem;
+    padding-right: 1rem;
+}
+
+.centerbookbutton2 button {
+    border-radius: 6rem;
+    font-size: 1.6rem;
+    background-color: transparent;
+    border: transparent;
+}
+
+.triptype {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+
+}
+
+.triptype button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.4rem;
+    color: #65728a;
+}
+
+.triptype button:hover {
+    text-decoration: .1rem underline red;
+}
+
+.wheretogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+
+}
+
+.start,
+.arriveat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.start,
+.arriveat :hover {
+    border: .1rem solid rgb(0, 37, 108);
+}
+
+.arriveat button,
+.wheretogo button {
+    background-color: transparent;
+    border: none;
+}
+
+.start p,
+.arriveat p {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.roundicon {
+    cursor: pointer;
+}
+
+hr {
+    color: #65728a;
+
+    margin: 3rem;
+}
+
+.dates {
+    line-height: 3rem;
+    font-size: 1rem;
+
+}
+
+.dates input {
+    appearance: none;
+
+}
+
+.selectflights {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabin button,
+.selectflights button {
+    width: 100%;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    border-bottom: .1rem solid #65728a;
+
+}
+
+.cabin,
+.passengersicon {
+    display: flex;
+    align-items: center;
+}
+
+.passengersicon p {
+    margin-right: 18rem;
+    margin-bottom: 2rem;
+}
+
+.cabin img,
+.passengersicon img {
+    width: 2rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+}
+
+.cabin p,
+span {
+    margin-right: 15.3rem;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    border-radius: .4rem;
+    background-color: rgb(0, 37, 108);
+    margin-top: 5rem;
+
+}
+
+.searchbar button {
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+
+
+}
+
+/* @media only screen and (min-width: 768px) {
+
+    /* Apply styles for screens wider than 768px, such as iPads */
+.container {
+
+    /* Adjust background image size */
+}
+
+.gdheader {
+    /* Add styles for the header on larger screens */
+}
+
+.maincontent {
+    width: 60%;
+    /* Adjust width for larger screens */
+}
+
+.bookflights {
+    /* Add styles for bookflights on larger screens */
+}
+
+/* Add more media queries for specific elements as needed */
+}
+
+@media only screen and (min-width: 1024px) {
+
+    /* Apply styles for screens wider than 1024px, such as larger iPads or desktops */
+    .maincontent {
+        width: 50%;
+
+    }
+
+
+}
+
+*/

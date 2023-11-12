@@ -1,0 +1,332 @@
+.granddaddy {
+    border: 3px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 668px;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-size: clamp (2rem, 1rem + 10vw 7rem);
+    /* heard about this from a youtube video */
+    /* font-family: Noto Sans; */
+
+}
+
+* {
+    box-sizing: inherit;
+}
+
+.container {
+    margin: 0;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid blue;
+    flex-grow: 1;
+    /* position: relative; */
+    max-width: 667px;
+    width: 100%;
+    background-color: aqua;
+}
+
+nav {
+    width: 100vw;
+    background-color: rgb(189, 193, 198);
+}
+
+.navheader1 ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    flex-grow: inherit;
+}
+
+.logo img {
+    max-width: 75%;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.headicons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em
+}
+
+.magglass {
+    /* color */
+    cursor: pointer;
+    flex: 1;
+}
+
+.headicons button {
+    border-radius: 40px;
+    color: rgb(189, 193, 198);
+    background-color: navy;
+    flex: 1;
+    cursor: pointer;
+}
+
+
+.icon {
+    /* color */
+    cursor: pointer;
+    flex: 1;
+
+}
+
+.maincontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(189, 193, 198) white;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.bookingtabparent {
+    display: flex;
+    background-color: rgb(189, 193, 198);
+    text-align: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.bookflights {
+    display: flex;
+    align-items: flex-start;
+
+    list-style-type: none;
+    word-wrap: none;
+}
+
+.bookflights button {
+    background-color: transparent;
+    overflow: hidden;
+    width: 100%;
+    padding: .5em;
+    border: none;
+    color: black;
+    text-align: center;
+    line-height: 1.45;
+    appearance: none;
+    cursor: pointer;
+}
+
+.bookflights button:hover {
+    background-color: #fff;
+}
+
+.booktab {
+    background-color: #fff;
+}
+
+
+.mytripstab {}
+
+.checkintab {}
+
+.flightstatus {}
+
+.bookbutton {
+    border-radius: 6rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookbutton ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonforbooking button {
+    background-color: navy;
+    color: white;
+}
+
+.buttonformiles button,
+.buttonforbooking button {
+    cursor: pointer;
+    border: none;
+    border-radius: 6rem;
+    width: 100%;
+
+}
+
+    {}
+
+.triptype {
+    display: flex;
+    text-align: center;
+    border: 1px dotted red;
+    background-color: #fff;
+    justify-content: center;
+
+
+}
+
+.roundtrip {
+    flex-grow: 1;
+    width: 33%;
+
+}
+
+.oneway {
+    flex-grow: 1;
+    width: 33%;
+}
+
+.multiway {
+    flex-grow: 1;
+    width: 33%;
+}
+
+.wheretogo {
+    background-color: blue;
+    display: flex;
+    justify-content: space-evenly;
+    border: 3px dotted rgb(255, 0, 225);
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.start {
+    /* display: flex; */
+
+    text-align: center;
+    border: 1px dotted red;
+    padding: 0;
+
+}
+
+.start p {
+    flex-grow: 2;
+    width: 9rem;
+    font-weight: 700;
+
+    font-size: 2.5em;
+}
+
+.start span {
+    font-size: 12px;
+    border: 1px dotted red;
+    margin-bottom: 3em;
+}
+
+.roundicon {
+    flex-grow: 1;
+}
+
+.arriveat p {
+    flex-grow: 2;
+    width: 9rem;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.dates {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+}
+
+.date button {
+    width: 100vw;
+}
+
+.calander {
+    background-color: transparent;
+    border: transparent;
+    width: 100vw;
+
+}
+
+
+.selectflights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.passangestag {}
+
+.numberofpassanges {}
+
+.dropdown {}
+
+.dropdown button {}
+
+
+.dropbtn {}
+
+.peopledropdown-content {}
+
+.passangersicon {}
+
+.selectclass {}
+
+.classdropdown {}
+
+.classdropdown-content {}
+
+.searchbar button {
+    width: 90vw;
+    border-radius: .4rem;
+    background-color: navy;
+    color: white;
+
+}
+
+.chatbot {}
+
+/* Mobile view */
+/* @media only screen and (max-width: 767px) {
+
+
+    body {
+        font-size: 12px;
+
+    }
+
+    /* Add more specific styles for mobile if needed */
+}
+
+*/
+/* Tablet and desktop view */
+@media only screen and (min-width: 768px) {
+
+
+    body {
+        font-size: 16px;
+        /* Adjust font size for larger screens */
+    }
+}
