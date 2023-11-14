@@ -40,11 +40,11 @@ img {
 .granddaddy {
     width: 100%;
     max-width: 930px;
-    min-width: 680;
 }
 
 .container {
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     background-image: url(../day10/planebackground);
@@ -248,6 +248,7 @@ h2 {
     justify-content: center;
     align-items: center;
     padding-top: 5rem;
+    overflow: hidden;
 
 }
 
@@ -358,40 +359,3 @@ span {
 
 
 }
-
-/* @media only screen and (min-width: 768px) {
-
-    /* Apply styles for screens wider than 768px, such as iPads */
-.container {
-
-    /* Adjust background image size */
-}
-
-.gdheader {
-    /* Add styles for the header on larger screens */
-}
-
-.maincontent {
-    width: 60%;
-    /* Adjust width for larger screens */
-}
-
-.bookflights {
-    /* Add styles for bookflights on larger screens */
-}
-
-/* Add more media queries for specific elements as needed */
-}
-
-@media only screen and (min-width: 1024px) {
-
-    /* Apply styles for screens wider than 1024px, such as larger iPads or desktops */
-    .maincontent {
-        width: 50%;
-
-    }
-
-
-}
-
-*/
