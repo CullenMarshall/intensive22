@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Clock</title>
+
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .container {
+            height: 100vh;
+            position: relative;
+            transform: rotate(-0.25turn);
+
+        }
+
+        .clock {
+            border: 1px solid;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: gainsboro;
+            background-image: url(/CullenSelfPractice/images/Geobackground.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+
+
+        }
+
+        .minutes {
+            position: relative;
+            left: 50%;
+            margin-left: 0;
+            background-color: red;
+            height: 3px;
+            top: 45%;
+            width: 50%;
+            transition: 60s;
+            transform: rotate(1deg);
+            transform-origin: left;
+        }
+
+        .hours {
+            position: relative;
+            background-color: blue;
+            height: 5px;
+            left: 50%;
+            margin-left: 0%;
+            top: 48%;
+            width: 30%;
+            transition: calc(60s * 60);
+            transform: rotate(1deg);
+            transform-origin: left;
+
+        }
+
+        .clock:hover .minutes,
+        .clock:hover .hours {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="clock">
+            <hr class="hours" />
+            <hr class="minutes" />
+        </div>
+    </div>
+</body>
+
+</html>
