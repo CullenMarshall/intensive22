@@ -2,15 +2,12 @@
     white rgb(255, 255, 255) */
 
 
+@font-face {
+    font-family: "Nato Sans";
+    src: url('https://fonts.googleapis.com/css2?family=Fascinate&family=Noto+Sans+KR:wght@700&display=swap');
+}
+
 * {
-
-    @font-face {
-        font-family: "Nato Sans";
-        src: url('https://fonts.googleapis.com/css2?family=Fascinate&family=Noto+Sans+KR:wght@700&display=swap');
-    }
-
-    ;
-
     box-sizing: inherit;
     margin: 0;
     padding: 0;
@@ -22,8 +19,6 @@ body {
     box-sizing: border-box;
     font-size: 10px;
     margin: 0;
-    scroll-behavior: smooth;
-    overflow: scroll;
 }
 
 ul,
@@ -95,15 +90,16 @@ img {
 }
 
 .maincontent {
-    width: 80%;
-    height: 90%;
+    /* width: 80%; */
+    /* height: 90%; */
     max-width: 132.8rem;
     padding: 2rem;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    /* margin-top: 2rem;
+    margin-bottom: 2rem; */
+    margin: 3rem;
 }
 
 .form {
@@ -189,21 +185,19 @@ h2 {
 .bookbuttonparent {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-top: 3rem;
     background-color: #fff;
     border-radius: 6rem;
-    min-height: 100%;
-    min-width: 4.4rem;
-    line-height: 1.35;
+    width: 232px;
     border: .1rem solid rgb(0, 37, 108);
 
 
 }
 
-.bookbuttonparent li {
-    display: inline;
-    padding: 3rem;
+.alignbuttoncenter {
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -213,15 +207,17 @@ h2 {
     background-color: rgb(0, 37, 108);
     border: transparent;
     color: #fff;
-    padding: 1rem;
-    padding-right: 1rem;
+    padding: 1rem 2rem;
+    /* padding-right: 1rem; */
+    /* radio buttons  */
 }
 
 .centerbookbutton2 button {
     border-radius: 6rem;
     font-size: 1.6rem;
     background-color: transparent;
-    border: transparent;
+    border: none;
+    padding-right: 2rem;
 }
 
 .triptype {
@@ -305,6 +301,11 @@ hr {
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
+    /* border: 1px solid red; */
+}
+
+.cabin {
+    border: 1px solid rgb(81, 56, 56);
 }
 
 .cabin button,
@@ -321,6 +322,7 @@ hr {
 .passengersicon {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .passengersicon p {

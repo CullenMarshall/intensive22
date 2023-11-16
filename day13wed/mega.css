@@ -1,0 +1,239 @@
+/*yellow- #fdd000 */
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Noto+Sans+KR:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Lexend+Mega&family=Noto+Sans+KR:wght@400;700&display=swap');
+
+* {
+    box-sizing: inherit;
+
+}
+
+html {
+    font-family: Lexend Mega;
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-snap-type: mandatory;
+
+}
+
+img {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    min-width: 370px;
+}
+
+.container {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* nav {
+    margin: 0;
+    padding: 2rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    z-index: 100;
+    background-color: #fdd000;
+} */
+
+/* menu img {
+    width: 100vw;
+}
+
+.logo {
+    width: 150px;
+
+} */
+
+.hero {
+    width: 100vw;
+    scroll-snap-align: start;
+    background-color: #fdd000;
+    display: flex;
+}
+
+
+h1 {
+    font-size: 2rem;
+}
+
+.menudiv {
+    display: flex;
+    flex-direction: column;
+}
+
+/* media needed here pics go to the side in full screen */
+.menu {
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    /* margin: 3rem;
+    padding: 2%; */
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+
+}
+
+.menudiv h3 {
+    font-size: 1rem;
+
+}
+
+
+.menudiv button {
+    background-color: #fdd000;
+    cursor: pointer;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+    font-weight: 700;
+}
+
+.menupicparent {
+    display: flex;
+    background-color: white;
+
+}
+
+.menupic {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+
+    height: 260px;
+    background-color: #f0f0f0b0;
+    border: .2rem solid;
+    padding: 2rem;
+    border-radius: 1rem;
+
+
+}
+
+.menupic img {
+    width: 100%;
+
+}
+
+.description h2 {
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+.description {
+    background-color: rgb(227, 227, 227);
+    height: 15%;
+
+
+}
+
+
+.demfranchiseboyz {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    margin: 0rem;
+    padding: 3rem;
+    background-color: #fdd000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.franchisebuttons {
+    display: flex;
+    width: 50%;
+    gap: 3rem;
+}
+
+.franchisebuttons button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+    font-weight: 700;
+
+}
+
+.storytime {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    /* background-image: url(../day13wed/megacoffee/main_mega.jpg);
+    background-image: 50%; */
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    flex-direction: column;
+    margin-top: 10rem;
+    padding: 2rem;
+}
+
+.storytimebuttons {
+    display: flex;
+    width: 50%;
+    gap: 3rem;
+}
+
+.storytimebuttons button {
+    background-color: #fdd000;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+    font-weight: 700;
+}
+
+.storytime img {
+    filter: opacity(10%);
+}
+
+
+.menutitle {
+    font-size: 3rem;
+}
+
+.menutitle span {
+    background-color: #fdd000;
+    transform: scaleY(1);
+    animation: 3s title infinite;
+}
+
+@keyframes title {
+    0% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(1.1);
+    }
+}
+
+
+.menutitle p {
+    font-size: 2rem;
+}
+
+.menutitle p:last-child {
+    font-size: 1rem;
+}
