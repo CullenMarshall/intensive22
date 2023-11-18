@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun and Moon</title>
+    <style>
+        body {
+            background-color: skyblue;
+            height: 100vh;
+            width: 100vw;
+            animation: darkness 17s infinite;
+
+        }
+
+        @keyframes darkness {
+            0% {
+                background-color: skyblue;
+            }
+
+            35% {
+                background-color: navy;
+            }
+
+            50% {
+                background-color: black
+            }
+
+            75% {
+                background-color: navy;
+            }
+
+            100% {
+                background-color: skyblue;
+            }
+        }
+
+        .posdiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .moonandsun {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 700px;
+            height: 700px;
+            animation: 17s linear infinite moonround;
+        }
+
+        @keyframes moonround {
+            from {
+
+                transform: rotate(1deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+
+
+        .moon {
+            background-color: blue;
+            border-radius: 50%;
+            height: 10%;
+            width: 10%;
+
+        }
+
+
+
+        .sun {
+            background-color: yellow;
+            height: 20%;
+            border-radius: 50%;
+            width: 20%;
+            animation: 17s linear infinite sunround;
+
+        }
+
+        .ground {
+            background-color: lawngreen;
+            width: 100vw;
+            height: 200px;
+            position: absolute;
+            bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="posdiv">
+        <div class="moonandsun">
+            <div class="moon"></div>
+            <div class="sun"></div>
+        </div>
+    </div>
+    <div class="ground">
+        <div></div>
+    </div>
+</body>
+
+</html>

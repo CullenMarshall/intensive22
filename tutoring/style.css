@@ -1,0 +1,195 @@
+/* border-box box stays the same size, within the confines 
+of the box */
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: Helvetica, sans-serif;
+   font-size: 10px;
+   margin: 0;
+}
+
+h1 {
+   font-size: 4em;
+   color: #434242;
+   text-align: center;
+}
+
+h2 {
+   font-size: 2.25em;
+   text-transform: uppercase;
+   color: #434242;
+   text-align: center;
+   margin: 0;
+   padding: 2em 0;
+}
+
+img {
+   max-width: 100%;
+}
+
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+button {
+   border: none;
+}
+
+.container {
+   height: 100vh;
+}
+
+
+/* ===================================== */
+/* ========= Exercise 1 styles ========= */
+/*====================================== */
+.ex1-container {
+   border: 1rem solid #9DDDBA;
+}
+
+.form-container {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   padding: 2em;
+
+}
+
+
+.form-ex1 {
+   display: flex;
+   border-radius: 1em;
+   box-shadow: .2em 1em 4em rgba(20, 20, 19, 0.4);
+}
+
+/*sign in */
+
+.sign-in {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   background-image: linear-gradient(to right, #9fdeaf, #9DDDBA);
+   padding: 5em;
+
+}
+
+.sign-in--title {
+   font-size: 3.15em;
+   color: white;
+   margin-bottom: .2em;
+}
+
+.sign-in--text {
+   width: 18em;
+   font-size: 1.5em;
+   font-weight: 100;
+   height: 2.5em;
+   color: #fafafa;
+
+}
+
+.sign-in--btn {
+   padding: .75em 3em;
+   background-color: transparent;
+   border-radius: 4em;
+   cursor: pointer;
+   border: 2px solid #ffff;
+}
+
+.sign-in--btn a {
+   font-size: 1em;
+   text-transform: uppercase;
+   color: #fafafa;
+   font-weight: 500;
+
+}
+
+.sign-up {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 5em 10em;
+}
+
+.sign-up--title {
+   font-size: 3.15;
+   color: #9fdeaf;
+   margin-bottom: .75em;
+
+}
+
+/* 3 padding values mean top left/right bottom */
+.sign-up--socials {
+   display: flex;
+   gap: 2em;
+   padding: 0 0 2em;
+}
+
+/* you use box-sizing here instead of the early stated 
+default border-box...the padding pushes against the div
+making the content smaller */
+.sign-up--icon {
+   width: 2.5em;
+   height: 2.5em;
+   border: 1px solid #ddd;
+   border-radius: 50%;
+   padding: .6em;
+   box-sizing: content-box;
+
+}
+
+.sign-up--title {
+   font-size: 3.15em;
+   margin-bottom: .75em;
+   color: #9DDDBA;
+}
+
+.sign-up--text {
+   font-size: 1.25em;
+   color: #c5c5c5;
+
+}
+
+.sign-up--input {
+   padding: 1em;
+   width: 20em;
+   font-size: 1.35;
+   background-color: #ececec;
+   margin-bottom: 2em;
+   border: none;
+}
+
+.sign-up--btn {
+   padding: .75em 3em;
+   background-color: #9fdeaf;
+   border-radius: 4em;
+   cursor: pointer;
+
+
+}
+
+.sign-up--btn a {
+   font-size: 1em;
+   text-transform: uppercase;
+   color: #ffff;
+   font-weight: 500;
+
+}
+
+/* ===================================== */
+/* ========= Exercise 2 styles ========= */
+/*====================================== */
+
+
+/* ===================================== */
+/* ========= Exercise 3 styles ========= */
+/*====================================== */
