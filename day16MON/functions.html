@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <script>
+        // a function that can be reused and take an input and save it 
+        function getNumInput(promptString) {
+            let input = prompt(promptString);
+            input = parseInt(input);
+            return input;
+        }
+        let newNum = getNumInput("Give me a number!");
+        console.log("Two times that is " + (newNum * 2));
+
+
+    </script>
+</body>
+
+</html>

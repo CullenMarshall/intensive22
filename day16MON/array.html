@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays</title>
+</head>
+
+<body>
+    <script>
+        let allFruits = ["apple", "banana", "lemon", "grape", "orange"];
+        allFruits[0]; //Frist element is index 0 and would be an apple
+        allFruits[1]; //Second element is index 1 and would be an banana
+        allFruits.length; // how much shit is in your array 
+        allFruits[allFruits.length - 1]; // numbers are off by one..gets last element
+        // it reads from the start 
+
+        // make a new array 
+        let tennums = new Array(15).fill(15);
+        console.log("Tennums:", tennums);
+
+        allFruits.at(0);
+        allFruits.at(1);
+        allFruits.at(-2); // second to last element of array 
+
+        allFruits.push("watermelon") // add to an array
+
+        console.log(allFruits);
+        let popped = allFruits.pop();//takes away
+        console.log("removed: ", popped)
+
+        allFruits.unshift("watermelon");
+        console.log(allFruits);// watermelon added to the front 
+        allFruits.shift("watermelon");
+        console.log(allFruits); // watermelon removed from the front 
+
+        // let lemonPos = allFruits.indexOf("lemon");
+        // console.log(lemonPos) ...then use slice...but its too complicated 
+        -
+
+    </script>
+</body>
+
+</html>

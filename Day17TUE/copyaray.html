@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const fruit = ["apple", "pear", "tomato", "orange", "tomato"];
+
+        // const veggie = fruit;
+
+        // console.log("Veg:", veggie);
+        // veggie[0] = "spinich";
+
+        // console.log(fruit)
+        // console.log(veggie)
+
+        // not good way to make copy
+
+        const fruit = ["apple", "pear", "tomato", "orange", "tomato"];
+        const veggie = fruit.slice();
+
+        console.log(fruit)
+        console.log(veggie)
+
+        veggie[0] = "spinich";
+
+        console.log(fruit)
+        console.log(veggie)
+
+
+
+
+    </script>
+</body>
+
+</html>
