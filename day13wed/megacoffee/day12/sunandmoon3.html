@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun and Moon</title>
+    <style>
+        body {
+            background-color: skyblue;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            animation: darkness 17s infinite;
+
+
+        }
+
+        @keyframes darkness {
+            0% {
+                background-color: navy;
+
+            }
+
+            35% {
+                background-color: black;
+
+
+            }
+
+            40% {
+                background-color: navy;
+
+            }
+
+            50% {
+                background-color: skyblue;
+
+            }
+
+            75% {
+                background-color: skyblue;
+
+            }
+
+
+            95% {
+                background-color: skyblue;
+
+            }
+
+            100% {
+                background-color: orange;
+            }
+        }
+
+        .posdiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            overflow-y: hidden;
+        }
+
+        .moonandsun {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            bottom: -200px;
+            width: 700px;
+            height: 700px;
+            animation: 17s linear infinite moonround;
+        }
+
+        @keyframes moonround {
+            from {
+
+                transform: rotate(1deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .moon {
+            background-color: rgb(182, 182, 190);
+            border-radius: 50%;
+            height: 10%;
+            width: 10%;
+
+
+        }
+
+        .sun {
+            background-color: yellow;
+            height: 20%;
+            border-radius: 50%;
+            width: 20%;
+            animation: 17s linear infinite sunround;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .ground {
+            background-color: lawngreen;
+            width: 100vw;
+            height: 200px;
+            position: absolute;
+            bottom: 0px;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="posdiv">
+        <div class="moonandsun">
+            <div class="moon"></div>
+            <div class="sun">
+            </div>
+        </div>
+        <div class="ground">
+            <div></div>
+        </div>
+</body>
+
+</html>

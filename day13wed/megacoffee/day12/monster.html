@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .censor {
+        height: 80px;
+        width: 200px;
+        background-color: black;
+        filter: blur(1);
+        color: aliceblue;
+        text-align: center;
+        margin: 40px;
+    }
+
+    .Monster {
+        text-align: center;
+        justify-content: center;
+        animation: 2s infinite;
+        transform: scale(105%);
+        animation: 10s help ease-in infinite;
+
+    }
+
+    @keyframes help {
+
+        25% {
+            transform: scale(101%);
+        }
+
+        35% {
+            transform: scale(105%);
+        }
+
+        25% {
+            transform: scale(100%);
+        }
+
+        35% {
+            transform: scale(95%);
+        }
+
+        25% {
+            transform: scale(101%);
+        }
+
+        35% {
+            transform: scale(105%);
+        }
+
+        50% {
+            transform: scale(110%);
+        }
+
+        75% {
+            transform: scale(100%);
+        }
+
+        95% {
+            transform: scale(105%);
+        }
+
+        100% {
+            transform: scale(85%)
+        }
+
+    }
+
+    .body {
+        position: relative;
+        display: flex;
+    }
+
+    .body img {
+        display: block;
+    }
+
+    .tail,
+    .censor,
+    .full,
+    .blush,
+    .eye,
+    .eye2,
+    .fire,
+    .hornl,
+    .hornr,
+    .mouth {
+        position: absolute;
+    }
+
+    .full {
+        top: -160px;
+        left: 310px;
+        transform: skew(-15deg);
+        animation: 3s thrust infinite ease-in-out;
+    }
+
+    @keyframes thrust {
+        0% {
+            transform: skew(-15deg);
+
+        }
+
+        25% {
+            transform: skew(20deg);
+        }
+
+        35% {
+            transform: skew(15%);
+        }
+
+        50% {
+            transform: skew(-15deg);
+        }
+
+        75% {
+            transform: skew(15DEG);
+        }
+
+
+        100% {
+            transform: skew(-20deg);
+        }
+    }
+
+    .tail {
+        top: 160px;
+        left: 270px;
+    }
+
+    .blush {
+        top: 130px;
+        left: 30px;
+    }
+
+    .eye {
+        top: 100px;
+        left: 30px;
+        transform: rotate(360deg);
+        animation: 5s eyes linear infinite;
+    }
+
+    @keyframes eyes {
+        0% {
+            transform: rotate(10deg);
+        }
+
+        10% {
+            transform: rotate(50deg);
+        }
+
+        20% {
+            transform: rotate(100deg);
+        }
+
+        30% {
+            transform: rotate(120deg);
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+
+        60% {
+            transform: rotate(200deg);
+        }
+
+        70% {
+            transform: rotate(240deg);
+        }
+
+        80% {
+            transform: rotate(290deg);
+        }
+
+        90% {
+            transform: rotate(320deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .fire {
+        top: 10px;
+        left: 650px;
+        z-index: 10;
+        transform: scale(100%);
+        animation: 10s fire infinite;
+
+    }
+
+    @keyframes fire {
+        0% {
+            opacity: 0;
+        }
+
+        25% {
+            opacity: .33;
+        }
+
+        50% {
+            opacity: .5;
+        }
+
+        66% {
+            opacity: .7;
+        }
+
+        75% {
+            opacity: .9;
+
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .hornl {
+        top: -50px;
+        left: 30px;
+    }
+
+    .hornr {
+        top: -50px;
+        left: 180px;
+    }
+
+    .mouth {
+        top: 140px;
+        left: 40px;
+        transform: rotate(360DEG);
+        animation: 5s mouth linear infinite;
+        transform: rotate(360deg);
+        animation: 5s mouth linear infinite;
+    }
+
+    @keyframes mouth {
+        0% {
+            transform: rotate(10deg);
+        }
+
+        10% {
+            transform: rotate(50deg);
+        }
+
+        20% {
+            transform: rotate(100deg);
+        }
+
+        30% {
+            transform: rotate(120deg);
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+
+        60% {
+            transform: rotate(200deg);
+        }
+
+        70% {
+            transform: rotate(240deg);
+        }
+
+        80% {
+            transform: rotate(290deg);
+        }
+
+        90% {
+            transform: rotate(320deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .eye2 {
+
+        top: 100px;
+        left: 200px;
+        transform: rotate(360deg);
+        animation: 5s eyes linear infinite;
+    }
+
+    @keyframes eyes {
+        0% {
+            transform: rotate(10deg);
+        }
+
+        10% {
+            transform: rotate(50deg);
+        }
+
+        20% {
+            transform: rotate(100deg);
+        }
+
+        30% {
+            transform: rotate(120deg);
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+
+        60% {
+            transform: rotate(200deg);
+        }
+
+        70% {
+            transform: rotate(240deg);
+        }
+
+        80% {
+            transform: rotate(290deg);
+        }
+
+        90% {
+            transform: rotate(320deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .censor {
+        top: 130px;
+        left: 280px;
+    }
+</style>
+
+<body>
+    <div class="Monster">
+        <div class="body">
+            <img src="../day12/img/body.png" alt="Monster Body">
+            <div class="tail"><img src="../day12/img/tail-sting.png" alt="Tail Sting"></div>
+            <div class="blush"><img src="../day12/img/blush.png" alt="Blush"></div>
+            <div class="blush2"><img src="../day12/img/blush.png" alt="Blush"></div>
+            <div class="eye"><img src="../day12/img/eye.png" alt="Eye"></div>
+            <div class="tail"><img src="../day12/img/tail-sting.png" alt="Tail Sting"></div>
+            <div class="fire"><img src="../day12/img/fire.png" alt="Fire"></div>
+            <div class="hornl"><img src="../day12/img/horn-left.png" alt="Left Horn"></div>
+            <div class="eye2"><img src="../day12/img/eye.png" alt="Eye"></div>
+            <div class="hornr"><img src="../day12/img/horn-right.png" alt="Right Horn"></div>
+            <div class="mouth"><img src="../day12/img/mouth.png" alt="Mouth"></div>
+            <div class="full"><img src="../day12/img/full.png" alt="Full Monster"></div>
+            <div class="censor">censored</div>
+        </div>
+    </div>
+</body>
+
+</html>

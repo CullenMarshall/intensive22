@@ -12,55 +12,103 @@
     <script src="letters.js"></script>
     <script src="people.js"></script>
     <script type="text/javascript">
-        // Create a function that says hello to the person name provided as an argument.
-        function asshole() {
-            let InputName = prompt("Howdy Partner, What do they call ya?");
-            let responseInput = alert(InputName + "?  I think I'll call you asshole instead!")
-        }
-        asshole()
-        // Create a function that will tell you if a provided year is a leap year or not.
-        // A year is a leap year if it is divisible by 4 but not 100, or else is divisible by 400.
-        function leapYear() {
-            let WhatYear = prompt("Tell me a year and I'll tell you if it is a leap year.");
+        // // Create a function that says hello to the person name provided as an argument.
+        // function asshole() {
+        //     let InputName = prompt("Howdy Partner, What do they call ya?");
+        //     let responseInput = alert(InputName + "?  I think I'll call you asshole instead!")
+        // }
+        // asshole()
 
-            if ((WhatYear % 4 === 0 && WhatYear % 100 !== 0) || WhatYear % 400 === 0) {
-                alert(WhatYear + " is a leap year!");
-            } else {
-                alert(WhatYear + " is not a leap year!");
-            }
-        }
 
-        leapYear()
+        // // Create a function that will tell you if a provided year is a leap year or not.
+        // // A year is a leap year if it is divisible by 4 but not 100, or else is divisible by 400.
+        // function leapYear() {
+        //     let WhatYear = prompt("Tell me a year and I'll tell you if it is a leap year.");
 
-        // Create a function that will return all the vowels in an array of letters. It should return the vowels found as a new array.
-        // Use the lotsOfLetters array from the provided letters.js file.
+        //     if ((WhatYear % 4 === 0 && WhatYear % 100 !== 0) || WhatYear % 400 === 0) {
+        //         alert(WhatYear + " is a leap year!");
+        //     } else {
+        //         alert(WhatYear + " is not a leap year!");
+        //     }
+        // }
 
-        function FindAvowel() {
-            let vowels = [];
-            for (let vowel of ['a', 'e', 'i', 'o', 'u']) {
-                if (lotsOfLetters.includes(vowel)) {
-                    vowels.push(vowel);
-                }
-            }
-            console.log(vowels);
-        }
+        // leapYear()
 
-        FindAvowel()
+        // // Create a function that will return all the vowels in an array of letters. It should return the vowels found as a new array.
+        // // Use the lotsOfLetters array from the provided letters.js file.
+
+        // function FindAvowel() {
+        //     let vowels = [];
+        //     for (let vowel of ['a', 'e', 'i', 'o', 'u']) {
+        //         if (lotsOfLetters.includes(vowel)) {
+        //             vowels.push(vowel);
+        //         }
+        //     }
+        //     console.log(vowels);
+        // }
+
+        // FindAvowel()
+
+
+        const vowels = lotsOfLetters.filter(letter => ['a', 'e', 'i', 'o', 'u'].includes(letter));
+        console.log(vowels);
+
 
 
         // Create a function that takes an array of people and a name and will return back the age of that person.
         // Use the lotsOfPeople array from the provided people.js file.
-        for (let x = 0; x < lotsOfPeople.length; x++) {
-            let currPerson = lotsOfPeople[x];
+
+        // function getAgeFor(inName, inlistofPeople)
+        //     let returnAge = 0;
+
+        //     for (let person of inlistofPeople) {
+        //         if (person[0] === inName) {
+        //             returnAge = person[1]
+        //             break;
+        //         }
+        //     }
+        // }
+
+        // return returnAge;
+
+        const GetAgeFOR = lotsOfPeople.map(person => person[1])
+        console.log()
 
 
         // Create a function that take an array of people, a name, and a age and will add a new person into the lotsOfPeople array.
         // Use the lotsOfPeople array from the provided people.js file.
+        function AddSomePeople(name, age) {
+            lotsOfPeople.push([name, age]);
+        }
 
-        // BONUS:
-        // Create a function that takes two arguments: an array of numbers and a multiplier.
-        // The function should update the array with each number multiplied by the multiplier parameter.
-        // Ex : [2,5,1,10] with multiplier 2 should update the array to [4,10,2,20]
+
+        // function addPerson(inName, inAge, lotsOfPeople) {
+        //     let returnAgg = lotsOfPeople
+        //     let nameInput = prompt("Enter a first name");
+        //     let nameAge = prompt("Enter thier age");
+        // }
+        // // BONUS:
+        // // Create a function that takes two arguments: an array of numbers and a multiplier.
+        // // The function should update the array with each number multiplied by the multiplier parameter.
+        // // Ex : [2,5,1,10] with multiplier 2 should update the array to [4,10,2,20]
+        // let arrOFNums = [2, 5, 1, 10]
+        // let multiplier = 0;
+
+        // function multiplierArryBy(multiplier, arrOfNums) {
+        //     for (let i = 0; i < arrOFNums.length; i++) {
+        //         arrOFNums[i] = arrOFNums[i] * multiplier;
+        //     }
+        //     return arrOFNums;
+        // }
+        // multiplierArryBy(2, arrOFNums)
+        // console.log(multiplierArryBy(2, arrOFNums))
+
+        // const numbers = [1, 2, 3, 4, 5];
+        //     DoubledArray = []
+        //     for (let i = 0; i < numbers.length; i++) {
+        //         DoubledArray.push(numbers[i] * 2);
+        //     }
+        //     console.log(`The numbers ${numbers} doubled are ${DoubledArray}`)
 
         // Do the previous exercise again, but this time the array passed in should not be changed by the function. Instead, return a new array.
 

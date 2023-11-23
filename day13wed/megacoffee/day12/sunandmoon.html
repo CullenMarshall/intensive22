@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Clock</title>
+
+    <style>
+        body {
+            overflow: hidden;
+            background-color: skyblue;
+        }
+
+        .container {
+            height: 100vh;
+            position: relative;
+            transform: rotate(-0.25turn);
+
+        }
+
+        .clock {
+            border: 1px solid;
+            width: 700px;
+            height: 500px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .moonandsun {
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        .sun {
+            position: relative;
+            margin-left: 0;
+            background-color: yellow;
+            height: 30%;
+            border-radius: 50%;
+            width: 30%;
+            animation: 60s minutes;
+
+        }
+
+        @keyframes minutes {
+            from {
+
+                transform: rotate(1deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .moon {
+            position: relative;
+            background-color: blue;
+            border-radius: 50%;
+            height: 15%;
+            width: 15%;
+            animation: 12 linear hours;
+
+
+        }
+
+        @keyframes hours {
+            from {
+
+                transform: rotate(1deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="clock">
+        <div class="moonandsun">
+            <div class="moon"></div>
+            <div class="sun"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

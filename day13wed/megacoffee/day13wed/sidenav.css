@@ -1,0 +1,150 @@
+nav {
+    margin: 0;
+    padding: 2rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    /* z-index: 100; */
+    background-color: #fdd000;
+}
+
+.logo {
+    width: 150px;
+}
+
+.sidemenu {
+    display: flex;
+    align-items: center;
+}
+
+.sidemenu img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.sidenav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fdd000;
+    transition: 0.3s;
+    padding-top: 2rem;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    color: #000;
+}
+
+
+.sidenav li {
+    padding: 1rem;
+}
+
+
+.sidenav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Initially hide the side navigation */
+.sidenav {
+    /* left: -250px; */
+    display: none;
+}
+
+#sidenav-toggle {
+    display: none;
+}
+
+/* Show the side navigation when the checkbox is checked */
+#sidenav-toggle:checked~.sidenav {
+    display: block;
+
+}
+
+/* .menu {
+    background-color: white;
+    padding: 3rem;
+}
+
+.menudiv {
+    text-align: center;
+    color: black;
+}
+
+.menutitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.menutitle span {
+    background-color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    color: #fdd000;
+}
+
+.menuitems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.menuitem {
+    width: 100%;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menuitem:hover {
+    transform: scale(1.05);
+}
+
+.menuitem img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.menuitem .description {
+    padding: 1.5rem;
+}
+
+.menuitem h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.menuitem p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+button {
+    background-color: #fff;
+    color: #fdd000;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+} */
