@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Generators 
+        function* names() {
+            yield "Abby";
+            yield "Barbie";
+            yield "Chuckie";
+            yield "Dougie";
+
+        }
+        const namesIter = names();
+
+        console.log(namesIter)
+        console.log(namesIter.next())
+        console.log(namesIter.next())
+        console.log(namesIter.next())
+        console.log(namesIter.next())
+        console.log(namesIter.next())
+
+        // Recursion. 
+        // a function that calls its self.. AND STOP 
+
+        //  // // Show the first 20 numbers of the fibonacci sequence with a loop
+        // // (10 first numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34)
+        // let numberone = 0; 
+        // let numbertwo = 1;
+        // for(let i = 0; i < 20; i++){
+        //     // let i = 0;
+        //     // while (i < 18) 
+        //         const newNumber = numberone += numbertwo;
+        //         console.log(newNumber)
+
+        //         numberone = numbertwo;
+        //         numbertwo = newNumber;
+        //         i += 1;
+        // }
+        function fib(numberone, numbertwo, allFibs)
+        const newNumber = numberone += numbertwo;
+        allFibs.push(newNumber);
+
+        if (allFibs.lenght < 20) {
+            fig(secondNum, new)
+        }
+
+    </script>
+</body>
+
+</html>

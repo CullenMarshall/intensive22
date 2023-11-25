@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <script>
+        let one = [1, "Dude"] //array
+        let two = {
+            age: 1,
+            motto: "Dude"
+        } //object
+        console.log(two.motto);
+
+        // object constructor
+
+        function Person(age, motto, name, boobsize) {
+            this.age = age;
+            this.motto = motto;
+            this.name = name;
+            this.boobsize = boobsize;
+        }
+        let oldbitch = new Person(54, "I love dick", "Brenda", "34-C")
+
+        console.log(oldbitch)
+
+        Person.prototype.getname = function () {
+            return "PROTOTYPE" + this.footsize;
+
+
+        }
+
+    </script>
+</body>
+
+</html>

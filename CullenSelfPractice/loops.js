@@ -77,7 +77,7 @@ for (let Number2THou = 1; Number2THou < 1000; Number2THou++) {
 for (let number = 2; number < 1000; number++) {
     let PrimeNumber = true;
 
-    for (let i = 2; i < number; i++) {
+    for (let i = 2; i < number; i++) 
         if (number % i === 0) {
             PrimeNumber = false;
             break;
