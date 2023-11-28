@@ -1,0 +1,273 @@
+/* Add missing import */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #000;
+    margin: 0%;
+}
+
+.container {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin: 0;
+    align-items: center;
+    height: 15vh;
+    /* background: linear-gradient(#ffa827 0%, #945b04 50%, #ff5005 100%); */
+    border-radius: 2rem;
+
+}
+
+
+@media screen and (min-width: 768px) {
+    .header_menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: #fff;
+    }
+}
+
+nav {
+    margin: 0;
+    padding: 2rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    /* z-index: 100; */
+    /* background: linear-gradient(#ffa827 0%, #945b04 50%, #ff5005 100%); */
+    ;
+}
+
+.logo {
+    width: 150px;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+
+.sidemenu {
+    display: flex;
+    align-items: center;
+}
+
+.sidemenu img {
+    width: 7rem;
+    cursor: pointer;
+}
+
+.sidenav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(#ffa827 0%, #945b04 50%, #ff5005 100%);
+
+    transition: 0.3s;
+    padding-top: 2rem;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    color: #000;
+}
+
+.sidenav li {
+    padding: 1rem;
+}
+
+.sidenav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Initially hide the side navigation */
+.sidenav {
+    /* left: -250px; */
+    display: none;
+}
+
+#sidenav-toggle {
+    display: none;
+}
+
+.sidenav-toggle img {
+    width: 1rem;
+    cursor: pointer;
+
+}
+
+/* Show the side navigation when the checkbox is checked */
+#sidenav-toggle:checked~.sidenav {
+    display: block;
+}
+
+
+/* Hide the main image when the checkbox is checked */
+#sidenav-toggle:checked~.main img {
+    display: none;
+}
+
+/* Everything below here is from sunday 11/26 */
+
+
+
+/* 
+@media screen and (min-width: 768px) {
+
+
+*/
+main {
+    height: fit-content;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.main img {
+    width: 70rem;
+    height: auto;
+    margin-bottom: 1rem;
+    padding: 0;
+    animation: blur-to-clear 4s ease-in-out forwards;
+}
+
+@keyframes blur-to-clear {
+    from {
+        filter: blur(90px);
+    }
+
+    to {
+        filter: blur(0);
+    }
+}
+
+.main h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    margin-top: -15rem;
+}
+
+main p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+main button {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.download_app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ffa827;
+}
+
+.AboutUS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+
+}
+
+.founders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+}
+
+.founders img {
+    width: 20rem;
+    height: auto;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+
+.carousel {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    color: #fff;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 100%;
+    scroll-snap-align: start;
+    transition: transform 3s ease-in;
+}
+
+.carousel-item img {
+    width: 15rem;
+    height: auto;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.news {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #fff;
+    color: #000;
+
+}
+
+.news1 img {
+    width: 30rem;
+}
+
+a {
+    text-decoration: none;
+
+}
