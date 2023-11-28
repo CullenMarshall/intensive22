@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        #moon {
+            width: 300px;
+            height: 250px;
+            display: block;
+            background: url('../day22Tue/moon.jpeg') no-repeat;
+            background-size: cover;
+        }
+
+        #moon[data-state='sun'] {
+            width: 100%;
+            height: 500px;
+            background: url('../day22Tue/son.jpg') no-repeat;
+            background-size: cover;
+        }
+
+        #output3 {
+            font-size: 13px;
+            font-style: italic;
+            margin: 0.25em 0;
+            padding: 0.25em 40px;
+            line-height: 2em;
+            position: relative;
+            color: #fff;
+        }
+
+        #output3>div.quote {
+            color: blue;
+            font-size: 14px;
+            display: block;
+            margin-top: 5px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output">Link to <a href="#">Wcoding</a></div>
+    Question 2 : Modify an attribute generically
+
+    <div id="output2"> my image <span id="moon"></span></div>
+
+    <div id="output3">Any fool can write code that a computer can understand.
+        Good programmers write code that humans
+        can
+        understand.</div>
+
+    <script>
+        const getElement = document.getElementsByTagName('a');
+        console.log(getElement);
+        getElement[0].setAttribute('href', 'https://www.wcoding.com');
+
+        const getElement2 = document.querySelector('#moon');
+        console.log(getElement2);
+        getElement2.setAttribute('data-state', 'sun');
+
+
+        const getElement3 = document.querySelector("#output3");
+        console.log(getElement3);
+        getElement3.innerHTML = '<div class="quote">' + getElement3.innerHTML + '</div>';
+
+    </script>
+</body>
+
+</html>
