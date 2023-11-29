@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>afternoonsss</title>
+</head>
+
+<body>
+    <script></script>
+</body>
+
+</html>
+<script>
+    let wwwDiv = document.createElement('div');
+    wwwDiv.innerHTML = '<p>The <span style="font-weight:bold">World Wide Web Cult</span> abbreviated as an acronym <span style="font-weight:bold">W3C</span> is a <a href="#">standards organization</a> non-profit organization responsible for promoting the compatibility of the <a href="#">World Wide Web</a></p>';
+    document.body.append(wwwDiv);
+
+    let languages = ['JavaScript', 'Node', 'Vue', 'React'];
+
+    let newh4 = document.createElement('h4');
+    newh4.innerHTML = "<h4>Languages based on ECMA Script: <h4>"
+    document.body.append(newh4);
+
+    let list = document.createElement("ul");
+
+    for (let i = 0; i < languages.length; i++) {
+        let listItem = document.createElement("li");
+        listItem.textContent = languages[i];
+        list.appendChild(listItem);
+    }
+    document.body.append(list);
+
+    let Uploadimg = document.createElement("form");
+    Uploadimg.innerHTML = '<form action="/upload-image" method="post" enctype="multipart/form-data"><fieldset><legend>Upload an image</legend><center>Image to upload:<input type="file" name="image"><br><input type="submit" value="Send"></center></fieldset></form>';
+    document.body.append(Uploadimg);
+
+    let Facebook = document.getElementById("")
+
+
+
+</script>
+</script>
+</body>
+
+</html>
