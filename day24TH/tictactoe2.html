@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tit toe2</title>
+    <style>
+        .parentboard {
+            display: grid;
+            grid-template-columns: repeat(3, 0fr);
+            grid-gap: 0px;
+        }
+
+        .gameboard {
+            width: 200px;
+            height: 200px;
+            background-color: whitesmoke;
+            border: 1px solid black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 900;
+            font-size: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parentboard">
+        <div class="gameboard"></div>
+        <div class="gameboard"></div>
+        <div class="gameboard"></div>
+        <div class="gameboard"></div>
+        <div class="gameboard"></div>
+        <div class="gameboard"></div>
+        <div class="gameboard"></div>
+        <div class="gameboard"></div>
+        <div class="gameboard"></div>
+    </div>
+
+    <div class="turntogo"></div>
+
+    <script>
+        let batterUp = "X";
+        let batterfields = document.querySelectorAll(".gameboard");
+        batterfields.forEach(bf => {
+            bf.addEventListener('click', function () {
+                if (bf.textContent === "") {
+                    bf.textContent = batterUp;
+                    if (batterUp === "X") {
+                        batterUp = "O";
+                    } else {
+                        batterUp = "X";
+                    }
+                }
+            });
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>

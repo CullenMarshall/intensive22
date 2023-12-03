@@ -1,0 +1,9 @@
+  box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5),
+  0 0 10px 10px rgba(255, 165, 0, 0.5),
+  0 0 10px 15px rgba(255, 255, 0, 0.5),
+  0 0 10px 20px rgba(0, 128, 0, 0.5),
+  0 0 10px 25px rgba(0, 0, 255, 0.5),
+  0 0 10px 30px rgba(75, 0, 130, 0.5),
+  0 0 10px 35px rgba(238, 130, 238, 0.5);
+
+  <section><div class="AboutUS"><div class="founders"><h2>Meet Our <span>Diverse</span>Knot</h2><div class="founders_container"><div class="founder1">< !-- <img src="/frogcoin/CEO.png" alt="">--><h3>Fitzwilliam Reginald Octavius Godfrey</h3><p>CEO</p></div><div class="founder2 floatclass">< !-- <img src="/frogcoin/bro1.png" alt="">--><h3>Hudson Sterling Beachwood</h3><p>CFO</p></div><div class="founder3 floatclass">< !-- <img src="/frogcoin/whitedude1.png" alt="">--><h3></h3><p>Chadley Mekju~Head of Marketing</p></div><div class="founder4 floatclass">< !-- <img src="/frogcoin/whitedude2.png" alt="">--><h3>Kay Sekki~Head of Diversity and Inclusion </h3><p></p></div><div class="founder5 floatclass">< !-- <img src="/frogcoin/diversity.png" alt="">--><h3>Frank Bisque~Head of Technology</h3><p></p></div>< !-- <div class="founder6 floatclass"><img src="/frogcoin/head of tech.png" alt=""><h3>John Monketey</h3><p>CEO</p></div>--></div></div></div></section>

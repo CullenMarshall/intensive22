@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function twoNumbers(str) {
+            let lines = str.split('\n');
+            let numbers = [];
+
+            for (let i = 0; i < lines.length; i++) {
+                let line = lines[i].trim();
+
+                for (let j = 0; j < line.length; j++) {
+                    let firstDigit = parseInt(line[j]);
+                    let lastDigit = parseInt(line[line.length - 1]);
+
+                    if (!isNaN(firstDigit) && !isNaN(lastDigit)) {
+                        let combined = parseInt(firstDigit.toString() + lastDigit.toString());
+
+                        if (combined >= 10 && combined <= 99 && numbers.length < 2) {
+                            numbers.push(combined);
+                        }
+                        break;
+                    }
+                }
+
+                if (numbers.length === 2) {
+                    break;
+                }
+            }
+
+            return numbers;
+        }
+
+        let result = twoNumbers(str);
+        console.log(result);
+
+
+
+        twoNumbers(str)
+
+
+    </script>
+</body>
+
+</html>

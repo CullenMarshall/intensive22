@@ -1,9 +1,13 @@
-/* Add missing import */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+@font-face {
+    font-family: 'Permanent Marker', cursive;
+    src: url(../fonts/PermanentMarker-Regular.ttf);
+}
 
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'permanent marker', cursive;
     font-size: 10px;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -155,6 +159,7 @@ main {
     margin-bottom: 1rem;
     padding: 0;
     animation: blur-to-clear 4s ease-in-out forwards;
+    background-color: #000;
 }
 
 @keyframes blur-to-clear {
@@ -193,7 +198,7 @@ main button {
     transition: all 0.3s ease-in-out;
 }
 
-
+/* section 2 */
 .download_app {
     display: flex;
     flex-direction: column;
@@ -203,6 +208,71 @@ main button {
     background-color: #ffa827;
 }
 
+.section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(#ffeb3b 0%, #ffc107 50%, #ff9800 100%);
+    color: whitesmoke;
+    gap: 1rem;
+    font-size: 2rem;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.section1_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: black; */
+    color: tomato;
+    gap: 1rem;
+    /* background-image: url(./gayfrogs.png);
+    background-repeat: no-repeat; */
+    font-size: 2rem;
+
+}
+
+.section1 button {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.section1_text span {
+    animation: go-away 5s infinite ease-out;
+}
+
+@keyframes go-away {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+        display: none;
+    }
+}
+
+/* section 2 */
 .founders h2 {
     font-size: 3rem;
     font-weight: 400;
@@ -219,7 +289,11 @@ main button {
     width: 50rem;
     height: 70rem;
     max-width: 100%;
+
+    font-size: 1.5rem;
+    /* color: green; */
     /* overflow: hidden; */
+
 }
 
 .AboutUS {
@@ -228,14 +302,14 @@ main button {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #fff;
+    background: linear-gradient(#1b5e20 0%, #388e3c 50%, #4caf50 100%);
 }
 
+/* Founders */
 .floatclass {
     position: absolute;
     width: 20rem;
     height: 20rem;
-    border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -247,14 +321,19 @@ main button {
 .founder1 {
     position: relative;
     background-image: url("./bro1.png");
+    background-repeat: no-repeat;
     width: 20rem;
     height: 20rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    animation: blur-to-clear 4s ease-in-out forwards;
+    padding: 2rem;
+    margin-top: 3rem;
 
 }
 
@@ -263,57 +342,186 @@ main button {
     height: auto;
     margin-bottom: 1rem;
     padding: 0;
-    /* animation: blur-to-clear 4s ease-in-out forwards; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+@keyframes blur-to-clear {
+    from {
+        filter: blur(90px);
+    }
+
+    to {
+        filter: blur(0);
+    }
+
 }
 
 .founder2 {
     top: 0;
     left: 0;
     background-image: url("./whitedude1.png");
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
 }
 
 .founder3 {
     top: 0;
     right: 0;
     background-image: url("./whitedude2.png");
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    color: whitesmoke;
+    padding: 2rem;
+    border: 1px solid red;
 }
 
 .founder4 {
     bottom: 0;
     right: 0;
     background-image: url("./diversity.png");
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+
+    border: 1px solid red;
 }
 
 .founder5 {
     bottom: 0;
     left: 0;
     background-image: url("./head of tech.png");
-
-}
-
-
-.carousel {
     display: flex;
-    overflow: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    color: #fff;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+
+
+
 }
 
-.carousel-item {
-    flex: 0 0 auto;
-    width: 100%;
-    scroll-snap-align: start;
-    transition: transform 3s ease-in;
-}
+/* founders */
 
 /* overflow x scroll... discord */
 
-.carousel-item img {
-    width: 15rem;
+.NFTS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+
+    color: tomato;
+    overflow-x: scroll;
+}
+
+.NFT_project1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    color: tomato;
+}
+
+.NFTGay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5rem;
+    /* background-color: black; */
+    color: tomato;
+    font-family: monospace;
+    gap: 1rem;
+    border: 1px solid red;
+    border-radius: 1rem;
+    box-shadow:
+        0 0 10px 5px rgba(255, 0, 0, 0.5),
+        0 0 10px 10px rgba(255, 165, 0, 0.5),
+        0 0 10px 15px rgba(255, 255, 0, 0.5),
+        0 0 10px 20px rgba(0, 128, 0, 0.5),
+        0 0 10px 25px rgba(0, 0, 255, 0.5),
+        0 0 10px 30px rgba(75, 0, 130, 0.5),
+        0 0 10px 35px rgba(238, 130, 238, 0.5);
+
+
+}
+
+#gaybutt {
+    width: 50%;
+    height: auto;
+    padding: 0;
+    animation: blinking 3s infinite ease-in-out;
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5),
+        0 0 10px 10px rgba(255, 165, 0, 0.5),
+        0 0 10px 15px rgba(255, 255, 0, 0.5),
+        0 0 10px 20px rgba(0, 128, 0, 0.5),
+        0 0 10px 21px rgba(0, 0, 255, 0.5),
+        0 0 10px 23px rgba(75, 0, 130, 0.5),
+        0 0 10px 26px rgba(238, 130, 238, 0.5);
+    ;
+    margin-bottom: 6rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+
+
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+
+}
+
+.NFT_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: black; */
+    color: tomato;
+    gap: 1rem;
+    /* background-image: url(./gayfrogs.png);
+    background-repeat: no-repeat; */
+    font-size: 2rem;
+
+}
+
+#gflogo {
+    width: 50rem;
     height: auto;
     margin-bottom: 1rem;
     padding: 0;
+    animation: blur-to-clear 5s ease-in-out forwards;
+    background-color: #000;
+    margin-bottom: -15rem;
+    margin-top: -15rem;
+    z-index: -10;
+    display: block;
+
+
 }
 
 .news {

@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+@font-face {
+    font-family: 'Permanent Marker', cursive;
+    src: url(../fonts/PermanentMarker-Regular.ttf);
+}
+
+html {
+    font-family: 'permanent marker', cursive;
+    font-size: 10px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #000;
+    margin: .25rem;
+}
+
+a {
+    text-decoration: none;
+    color: seagreen;
+
+}
+
+.enlarge {
+    transition: transform 0.3s ease;
+}
+
+.enlarge:hover {
+    transform: scale(1.1);
+
+}
+
+.container {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin: 0;
+    align-items: center;
+    height: 15vh;
+    /* background: linear-gradient(#ffa827 0%, #945b04 50%, #ff5005 100%); */
+    border-radius: 2rem;
+
+}
+
+
+@media screen and (min-width: 768px) {
+    .header_menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: #fff;
+    }
+}
+
+nav {
+    margin: 0;
+    padding: 2rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    /* z-index: 100; */
+    /* background: linear-gradient(#ffa827 0%, #945b04 50%, #ff5005 100%); */
+    ;
+}
+
+.logo {
+    width: 150px;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+
+.sidemenu {
+    display: flex;
+    align-items: center;
+}
+
+.sidemenu img {
+    width: 7rem;
+    cursor: pointer;
+}
+
+.sidenav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(#ffa827 0%, #945b04 50%, #ff5005 100%);
+
+    transition: 0.3s;
+    padding-top: 2rem;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    color: #000;
+}
+
+.sidenav li {
+    padding: 1rem;
+}
+
+.sidenav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Initially hide the side navigation */
+.sidenav {
+    /* left: -250px; */
+    display: none;
+}
+
+#sidenav-toggle {
+    display: none;
+}
+
+.sidenav-toggle img {
+    width: 1rem;
+    cursor: pointer;
+
+}
+
+/* Show the side navigation when the checkbox is checked */
+#sidenav-toggle:checked~.sidenav {
+    display: block;
+}
+
+
+/* Hide the main image when the checkbox is checked */
+#sidenav-toggle:checked~.main img {
+    display: none;
+}
+
+/* Everything below here is from sunday 11/26 */
+
+
+
+/* 
+@media screen and (min-width: 768px) {
+
+
+*/
+main {
+    height: fit-content;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-image: url(./background.png);
+}
+
+.main img {
+    width: 50rem;
+    height: auto;
+    margin-bottom: 1rem;
+    padding: 0;
+    animation: blur-to-clear 4s ease-in-out forwards;
+    background-image: url(./background.png);
+}
+
+@keyframes blur-to-clear {
+    from {
+        filter: blur(90px);
+    }
+
+    to {
+        filter: blur(0);
+    }
+}
+
+.main h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    margin-top: -15rem;
+}
+
+main p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+main button {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* section 2 */
+.download_app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ffa827;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: gradient(#ffeb3b 0%, #ffc107 50%, #ff9800 100%);
+    background-image: url(./background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    gap: 1rem;
+    font-size: 2rem;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.section1_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: black; */
+    color: whitesmoke;
+    gap: 1rem;
+    /* background-image: url(./gayfrogs.png);
+    background-repeat: no-repeat; */
+    font-size: 2rem;
+
+}
+
+
+
+.section1 button {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: permanent marker;
+    box-shadow: 1rem 1rem 1rem .5rem rgba(0, 0, 0, 0.5);
+}
+
+.section1_text span {
+    animation: go-away 5s infinite ease-out;
+}
+
+@keyframes go-away {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+        display: none;
+    }
+}
+
+/* section 2 */
+.founders h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+
+}
+
+.founders_container {
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+    color: #121212;
+    font-size: 2rem;
+    font-family: 'Permanent Marker', cursive;
+    margin: 2rem;
+    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: auto;
+
+
+
+}
+
+.AboutUS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(#1b5e20 0%, #388e3c 50%, #4caf50 100%);
+    gap: 2rem;
+}
+
+h2 span {
+    animation: diverse 5s infinite linear;
+    font-size: 20px;
+    /* Starting font size */
+    display: inline-block;
+    /* Ensures rotation works properly */
+}
+
+@keyframes diverse {
+    0% {
+        transform: scale(1) rotate(0deg);
+        color: red;
+    }
+
+    20% {
+        transform: scale(1.2) rotate(90deg);
+        color: orange;
+    }
+
+    40% {
+        transform: scale(1.4) rotate(180deg);
+        color: yellow;
+    }
+
+    60% {
+        transform: scale(1.6) rotate(270deg);
+        color: green;
+    }
+
+    80% {
+        transform: scale(1.8) rotate(360deg);
+        color: blue;
+    }
+
+    100% {
+        transform: scale(2) rotate(450deg);
+        color: violet;
+    }
+}
+
+.AboutUS img {
+    width: 20rem;
+    height: auto;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    animation: blur-to-clear 4s ease-in-out forwards;
+    background-image: url(./background.png);
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(1, 1, 1, 0.3);
+
+
+}
+
+.founders {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    gap: 5rem;
+    color: #121212;
+    font-size: 2rem;
+    font-family: 'Permanent Marker', cursive;
+    margin: 1rem;
+
+
+}
+
+.founders_container {
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+    color: #121212;
+    font-size: 2rem;
+    font-family: 'Permanent Marker', cursive;
+    margin: 1rem;
+    overflow: scroll;
+    overflow-x: auto;
+    /* overflow-y: auto; */
+    border-radius: 1rem;
+}
+
+
+
+/* founders */
+
+/* overflow x scroll... discord */
+.nft_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    /* background-color: black; */
+    color: tomato;
+    gap: 1rem;
+    /* background-image: url(./gayfrogs.png);
+    background-repeat: no-repeat; */
+    font-size: 2rem;
+    font-family: 'Permanent Marker', cursive;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(1, 1, 1, 0.3);
+    border: 1px solid red;
+
+}
+
+.NFTS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+    color: tomato;
+    overflow-x: scroll;
+}
+
+.NFT_project1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    color: tomato;
+}
+
+.NFTGay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5rem;
+    /* background-color: black; */
+    color: tomato;
+    font-family: monospace;
+    gap: 1rem;
+    border: 1px solid red;
+    border-radius: 1rem;
+    box-shadow:
+        0 0 10px 5px rgba(255, 0, 0, 0.5),
+        0 0 10px 10px rgba(255, 165, 0, 0.5),
+        0 0 10px 15px rgba(255, 255, 0, 0.5),
+        0 0 10px 20px rgba(0, 128, 0, 0.5),
+        0 0 10px 25px rgba(0, 0, 255, 0.5),
+        0 0 10px 30px rgba(75, 0, 130, 0.5),
+        0 0 10px 35px rgba(238, 130, 238, 0.5);
+
+
+}
+
+#gaybutt {
+    width: 50%;
+    height: auto;
+    padding: 0;
+    animation: blinking 3s infinite ease-in-out;
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5),
+        0 0 10px 10px rgba(255, 165, 0, 0.5),
+        0 0 10px 15px rgba(255, 255, 0, 0.5),
+        0 0 10px 20px rgba(0, 128, 0, 0.5),
+        0 0 10px 21px rgba(0, 0, 255, 0.5),
+        0 0 10px 23px rgba(75, 0, 130, 0.5),
+        0 0 10px 26px rgba(238, 130, 238, 0.5);
+    ;
+    margin-bottom: 6rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    color: seagreen;
+
+
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+
+}
+
+.NFT_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: black; */
+    color: tomato;
+    gap: 1rem;
+    /* background-image: url(./gayfrogs.png);
+    background-repeat: no-repeat; */
+    font-size: 2rem;
+
+}
+
+#gflogo {
+    width: 30rem;
+    height: auto;
+    margin-bottom: 1rem;
+    padding: 0;
+    animation: blur-to-clear 5s ease-in-out forwards;
+    background-color: #000;
+    /* margin-bottom: -15rem; */
+    /* margin-top: -15rem; */
+    z-index: -10;
+    display: block;
+
+
+}
+
+.newscontainer {
+    /* background-color: #fff; */
+    background: linear-gradient(135deg, #e3c887, #b7a17e, #7c6f64);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    /* color: #000; */
+    width: 100%;
+    font-family: monospace;
+    background-image: url(./back2.png);
+    color: seagreen;
+    font-size: 2rem;
+
+
+}
+
+.news a {
+    color: whitesmoke;
+}
+
+.news h2 {
+    box-shadow: 1px 1px 40px 2px #121212;
+    border-radius: .5rem;
+}
+
+
+.news1 img {
+    width: 30rem;
+    min-height: 30rem;
+    background: linear-gradient(135deg, #e3c887, #b7a17e, #7c6f64);
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.merchandise {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: black; */
+    color: tomato;
+    gap: 1rem;
+    font-size: 2rem;
+    font-family: 'Permanent Marker', cursive;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(1, 1, 1, 0.3);
+    border: 1px solid red;
+
+
+}
+
+.merchandise img {
+
+    margin-bottom: 1rem;
+    padding: 0;
+    animation: blur-to-clear 4s ease-in-out forwards;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(1, 1, 1, 0.3);
+
+}
+
+#merchhead {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: seagreen;
+}
+
+.signup-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: black; */
+    color: tomato;
+    gap: 1rem;
+    font-size: 2rem;
+    font-family: 'Permanent Marker', cursive;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(1, 1, 1, 0.3);
+    border: 1px dotted red;
+
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer img {
+    width: 10rem;
+    height: auto;
+    margin-bottom: 1rem;
+    padding: 0;
+    animation: blur-to-clear 4s ease-in-out forwards;
+    background-image: url(./background.png);
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(1, 1, 1, 0.3);
+
+}
