@@ -1,0 +1,10 @@
+});
+response.forEach((uni) => {
+const option = document.createElement('option');
+option.value = uni.name;
+option.textContent = uni.name;
+combo.appendChild(option);
+});
+document.body.appendChild(combo);
+});
+};

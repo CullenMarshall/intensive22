@@ -73,7 +73,7 @@ nav {
 }
 
 .logo {
-    width: 150px;
+    width: 15rem;
     padding-left: 2rem;
     padding-bottom: 2rem;
 }
@@ -81,6 +81,7 @@ nav {
 .sidemenu {
     display: flex;
     align-items: center;
+    background-image: url(./background.png);
 }
 
 .sidemenu img {
@@ -96,7 +97,6 @@ nav {
     width: 250px;
     height: 100%;
     background: linear-gradient(#ffa827 0%, #945b04 50%, #ff5005 100%);
-
     transition: 0.3s;
     padding-top: 2rem;
 }
@@ -170,7 +170,7 @@ main {
 }
 
 .main img {
-    width: 50rem;
+    width: 60rem;
     height: auto;
     margin-bottom: 1rem;
     padding: 0;
@@ -626,6 +626,22 @@ a {
 
 }
 
+.merchandise button {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: permanent marker;
+    box-shadow: 1rem 1rem 1rem .5rem rgba(0, 0, 0, 0.5);
+
+}
+
 #merchhead {
     font-size: 3rem;
     font-weight: 400;
@@ -649,6 +665,21 @@ a {
     box-shadow: 0 0 20px rgba(1, 1, 1, 0.3);
     border: 1px dotted red;
 
+}
+
+.submit-btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #fff;
+    color: seagreen;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: permanent marker;
+    box-shadow: 1rem 1rem 1rem .5rem rgba(0, 0, 0, 0.5);
 }
 
 .footer {

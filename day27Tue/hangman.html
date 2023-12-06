@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hang Man</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+
+
+        }
+
+        img {
+            width: 100vw;
+            z-index: -10;
+            opacity: .4;
+        }
+
+        .parentletter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .letter {
+            border: 3px solid rgb(222, 5, 5);
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            font-size: 1.5rem;
+            margin: 0.2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="parentletter"></div>
+        <div class="buttonContainer"></div>
+        <div class="lives">Lives: 7 </div>
+        <!-- <div><img src="./Untitled design.png" alt=""></div> -->
+
+    </div>
+
+    <script>
+        let WordToGuessArray = [];
+        let GetWord = new XMLHttpRequest();
+        GetWord.open("GET", "https://random-word-api.herokuapp.com/word");
+        GetWord.addEventListener("load", function () {
+            let response = JSON.parse(GetWord.responseText);
+            let WordToGuess = response[0];
+            WordToGuessArray = WordToGuess.split("");
+            CreateLetterDivs();
+        });
+        GetWord.send();
+
+        function CreateLetterDivs() {
+            const parentContainer = document.querySelector('.parentletter');
+            for (let i = 0; i < WordToGuessArray.length; i++) {
+                const letter = document.createElement("div");
+                letter.classList.add("letter");
+                letter.innerHTML = "_";
+                parentContainer.appendChild(letter);
+            }
+        }
+
+        let lives = 7;
+
+        function CreateTheABCs() {
+            const abcs = 'abcdefghijklmnopqrstuvwxyz'.split('');
+            const buttonContainer = document.querySelector('.buttonContainer');
+
+            abcs.forEach(letter => {
+                const button = document.createElement('button');
+                button.textContent = letter;
+                button.addEventListener('click', () => {
+                    if (WordToGuessArray.includes(letter)) {
+                        const letterDivs = document.querySelectorAll('.letter');
+                        WordToGuessArray.forEach((wordLetter, index) => {
+                            if (wordLetter === letter) {
+                                letterDivs[index].textContent = letter;
+                            }
+                        });
+                        if (checkIfWordIsGuessed()) {
+                            endGame('win');
+                        }
+                    } else {
+                        lives--;
+                        document.querySelector('.lives').textContent = `Lives: ${lives}`;
+                        if (lives === 0) {
+                            endGame('lose');
+                        }
+                    }
+                    button.disabled = true;
+                });
+                buttonContainer.appendChild(button);
+            });
+
+        }
+
+        function checkIfWordIsGuessed() {
+            const letterDivs = document.querySelectorAll('.letter');
+            for (let i = 0; i < letterDivs.length; i++) {
+                if (letterDivs[i].textContent === '_') {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function endGame(outcome) {
+            if (outcome === 'win') {
+                alert('So you live to die another day!');
+            } else if (outcome === 'lose') {
+                alert(`Oops! You suck. The word was: ${WordToGuessArray.join('')}`);
+            }
+
+        }
+        // function restartGame() {
+        //     live = 7;
+        //     GetWord.send()
+        //     document.querySelector('.lives').textContent = `Lives: ${lives}`;
+        // }
+
+        CreateTheABCs();
+    </script>
+</body>
+
+</html>
+
+</script>
+</body>
+
+</html>
