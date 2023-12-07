@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeOut</title>
+</head>
+<style>
+    #time {
+        font-size: 100px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="time"></div>
+
+    <script>
+        let timeElm = document.querySelector("#time");
+        let currTime = 1;
+        setTimeout(() => {
+            currTime += 1
+            timeElm.innerHtml = currTime
+
+            if (currTime === 10) {
+                clearInterval(intervalId)
+            }
+
+        }, 1000);
+        document.log.textContent = 'fuck you';
+    </script>
+</body>
+
+</html>

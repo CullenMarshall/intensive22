@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave or Burn</title>
+    <style>
+        .flag img {
+            width: 320px;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url(./World.png);
+            background-position: center;
+            overflow: auto;
+
+        }
+
+        .flag {
+            background-color: white;
+            box-shadow: 0px 0px 20px 20px whitesmoke;
+        }
+
+        button {
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2rem;
+            margin: 2rem;
+            box-shadow: 0px 0px 20px 20px rgb(53, 53, 158);
+            word-wrap: break-word;
+
+
+        }
+
+
+        .info {
+            background-color: aliceblue;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2rem;
+            box-shadow: 0px 0px 20px 20px rgb(53, 53, 158);
+            margin: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flag"><img src="" alt="Flag"></div>
+        <div class="options"></div>
+        <div class="info"></div>
+        <div class="nextButton"></div>
+    </div>
+
+    <script>
+        fetch("https://restcountries.com/v3.1/all")
+            .then(res => res.json())
+            .then(res => {
+                countries = res;
+                let flagsAndNames = countries.map(country => {
+                    // want to work on the output and make it more organized looking 
+                    return {
+                        name: country.name.common,
+                        flag: country.flags.png,
+                        population: country.population,
+                        region: country.region,
+                        landlocked: country.landlocked,
+                        language: country.language
+
+
+                    };
+                });
+                console.log(countries)
+
+
+                // Get a random winning country
+                let winningFlag = flagsAndNames[Math.floor(Math.random() * flagsAndNames.length)];
+                let winningCountry = winningFlag.name;
+
+                //get the wrong answers 
+                let wrongAnswers = [];
+                while (wrongAnswers.length < 3) {
+                    let randomCountry = flagsAndNames[Math.floor(Math.random() * flagsAndNames.length)];
+                    if (randomCountry.name !== winningCountry && !wrongAnswers.some(e => e.name === randomCountry.name)) {
+                        wrongAnswers.push(randomCountry);
+                    }
+                }
+
+                // Display the flag of the correct answer
+                document.querySelector('.flag img').src = winningFlag.flag;
+
+                // Display buttons for each of the four options
+                let options = [winningFlag, ...wrongAnswers];
+                options.forEach(option => {
+                    let button = document.createElement('button');
+                    button.textContent = option.name;
+                    button.addEventListener('click', () => {
+                        if (button.textContent === winningCountry) {
+                            document.querySelector('.info').innerHTML = `
+                                 <p>Country: ${winningFlag.name}</p>
+                                 <p>Population: ${winningFlag.population}</p>
+                                <p>Landlocked: ${winningFlag.landlocked}</p>
+                                <p>Region: ${winningFlag.region}</p>`;
+                        } else {
+
+                            button.style.textDecoration = 'line-through'; // wrong answers
+                        }
+                        //button to go to the next question
+
+                        // need to figure out how to only return one next button 
+                        let nextButton = document.createElement('button');
+                        nextButton.textContent = 'Next';
+                        nextButton.addEventListener('click', () => {
+                            location.reload();
+                        });
+                        document.querySelector('.nextButton').appendChild(nextButton);
+                    });
+                    document.querySelector('.options').appendChild(button);
+                });
+            });
+    </script>
+</body>
+
+</html>
