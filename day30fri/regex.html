@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex time</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const str2 = "sdfcdskvsdm";
+        const str3 = "AAZddASvKlkfec";
+        const str4 = "05678298818";
+
+        const str5 = "abbbbbb";
+        const str6 = "abbc";
+        const str7 = "ab";
+
+        const str9 = "ac";
+
+        const str10 = "abb";
+        const str11 = "abbb";
+        const str12 = "abbbbb";
+
+        const str13 = "aaNBB";
+        const str14 = "aaaaaaA";
+        const str15 = "AANBB";
+        const str16 = "aaaabbb";
+
+        const str17 = "AAvdes_vEFZc_cdsAZD";
+        const str18 = "ZSKJZ";
+        const str19 = "qwerty_uiop_cvbn";
+
+        // 1. match str2 but not str3 and not str4
+        let Regex1 = /^[a-z]+$/g;
+        console.log(str2.match(Regex1))
+        if (Regex1.test(str2) && !Regex1.test(str3) && !Regex1.test(str4)) {
+            console.log("You got it");
+        } else {
+            console.log("You dumb!");
+        }
+
+
+        // 2. match str4 but not str2 and not str3
+        let Regex2 = /^[0-9]+$/;
+        if (Regex2.test(str4) && !Regex2.test(str2) && !Regex2.test(str3)) {
+            console.log("You got it");
+        } else {
+            console.log("You dumb!");
+        }
+
+        // 3. match str2 and str3 but not str4
+        let Regex3 = /[^\D]/;
+        if (true) {
+            console.log("You got it!");
+        }
+        else {
+            console.log("You dumb!");
+        }
+        console.log("You dumb!");
+
+
+        // 4. match str5 str6 and str7 but not str9
+        let Regex4 = /ab+c?/;// alex's code
+        if (Regex4.test(str5) && Regex4.test(str6) && Regex4.test(str7) && !Regex4.test(str9)) {
+            console.log("You got it");
+        } else {
+            console.log("You dumb!");
+        }
+
+        // 5. match str11 and str12 but not str10
+        let Regex5 = /ab{2,4}/;
+
+        if (Regex5.test(str11) && Regex5.test(str12) && !Regex5.test(str10)) {
+            console.log("You got it");
+        } else {
+            console.log("You dumb!");
+        }
+
+        // 6. match str13 and str14 but not str15 and str16
+        let Regex6 = /^[a-z]+[A-Z]+$/;
+        if (Regex6.test(str13) && Regex6.test(str14) && !Regex6.test(str15) && !Regex6.test(str16)) {
+            console.log("You got it!")
+        }
+        else {
+            console.log("You dumb!");
+        }
+
+        // 7. match str17 and str18 and str19
+        Regex7 = /^.+ $/
+
+    </script>
+</body>
+
+</html>
