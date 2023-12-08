@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midjet</title>
+    <style>
+        body {
+            height: 100vh;
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            background-position: center;
+            overflow: auto;
+
+        }
+
+        #midget1 {
+            height: 50vh;
+            width: 50vw;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            background-image: url(/day29TH/download.jpg);
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+            background-position: bottom;
+            color: rgb(238, 237, 237);
+            text-shadow: 10px 10px 10px black;
+            font-size: 2rem;
+            border-radius: 7px;
+        }
+
+        #midget2 {
+            height: 50vh;
+            width: 50vw;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            background-image: url(./jolly.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-position-y: 100px; */
+            color: rgb(238, 237, 237);
+            text-shadow: 4px 4px 4px rgb(0, 0, 0);
+            font-size: 2rem;
+            border-radius: 7px;
+        }
+
+        button {
+            font-size: 2rem;
+            margin: 2rem;
+            box-shadow: 0px 0px 20px 20px rgb(227, 227, 230);
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<div class="container">
+    <div id="midget1">
+        <h3 id="nameL"></h3>
+        <button class="button">Am I taller?</button>
+    </div>
+    <div id="midget2">
+        <h3 id="nameR"></h3>
+        <button class="button">Or am I taller?</button>
+    </div>
+</div>
+
+<body>
+    <script>
+        const Ninja_APIkey = "Su4JLIQNivO/wvaBohLd8A==yhZbmG6XnYrncjfl";
+
+        fetch("https://api.api-ninjas.com/v1/celebrity?min_height=0.1", {
+            headers: {
+                "X-Api-Key": Ninja_APIkey
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(response => {
+                const celebList = response.map(celeb => {
+                    return {
+                        name: celeb.name,
+                        age: celeb.age,
+                        height: celeb.height,
+                    };
+                });
+
+                const nameL = document.getElementById('nameL');
+                const nameR = document.getElementById('nameR');
+                const buttonL = document.querySelector('#midget1 .button');
+                const buttonR = document.querySelector('#midget2 .button');
+
+                let celeb1, celeb2;
+                let score = 0;
+                let rounds = 10;
+
+                function startRound() {
+                    celeb1 = celebList[Math.floor(Math.random() * celebList.length)];
+                    celeb2 = celebList[Math.floor(Math.random() * celebList.length)];
+
+                    nameL.textContent = `${celeb1.name}, age ${celeb1.age}`;
+                    nameR.textContent = `${celeb2.name}, age ${celeb2.age}`;
+                }
+
+                buttonL.addEventListener('click', () => {
+                    if (celeb1.height > celeb2.height) {
+                        score++;
+                    }
+                    rounds--;
+                    if (rounds > 0) {
+                        startRound();
+                    } else {
+                        alert(`Game over! Your score is ${score} out of 10.`);
+                    }
+                });
+
+                buttonR.addEventListener('click', () => {
+                    if (celeb2.height > celeb1.height) {
+                        score++;
+                    }
+                    rounds--;
+                    if (rounds > 0) {
+                        startRound();
+                    } else {
+                        alert(`Game over! Your score is ${score} out of 10.`);
+                    }
+                });
+
+                startRound();
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+</body>
+
+</html>
