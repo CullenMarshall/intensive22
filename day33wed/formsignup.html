@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(0, 0, 0);
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .parent_container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        .border_con {
+            border: 3px solid rgb(0, 0, 0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        fieldset {
+            width: 200px;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent_container">
+        <form action="POST" action="process.php">
+            <div class="border_con">
+                <div class="signinheader">
+                    <h2>Sign in </h2>
+                </div>
+                <div class="genderbuttons">
+                    <button name="malebutt" value="man">doorknobs</button>
+                    <button name="femalebutt" value="feman">keyholes</button>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>LastName</legend>
+                        <div>
+                            <input name="lastname" type="text" id="lastnamename" value="" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>FirstName</legend>
+                        <div>
+                            <input name="firstname" type="text" id="firstnamename" value="" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Age</legend>
+                        <div>
+                            <input name="age" type="number" id="age" min="0" max="120" value="" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Login</legend>
+                        <div>
+                            <input name="login" type="text" id="login" value="" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Password</legend>
+                        <div>
+                            <input name="password" type="text" id="password" value="" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Password</legend>
+                        <div>
+                            <input name="password" type="text" id="password" value="" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <select name="country" name="country" id="country">
+                        <option value="" selected disabled>Select country</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="france">France</option>
+                        <option value="germany">Germany</option>
+                        <option value="italy">Italy</option>
+                        <option value="spain">Spain</option>
+                        <option value="uk">UK</option>
+                        <option value="russia">Russia</option>
+                        <option value="china">China</option>
+                        <option value="japan">Japan</option>
+                        <option value="india">India</option>
+                        <option value="australia">Australia</option>
+                        <option value="brazil">Brazil</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="chile">Chile</option>
+                        <option value="peru">Peru</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="venezuela">Venezuela</option>
+                        <option value="ecuador">Ecuador</option>
+                        <option value="bolivia">Bolivia</option>
+                        <option value="paraguay">Paraguay</option>
+                        <option value="uruguay">Uruguay</option>
+                        <option value="panama">Panama</option>
+                        <option value="korea">Korea</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" name="signmeup">
+                        <span class="slider round">Sign me up!</span>
+                </div>
+                <div>
+                    <button name="signin" class="signinbutton">Sign in</button>
+                </div>
+                <div>
+                    <button name="reset" class="reset">reset</button>
+                </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
+
+let lastname = document.getElementById('lastname').value;
+let firstname = document.getElementById('firstname').value;
+let age = document.getElementById('age').value;
+let login = document.getElementById('login').value;
+let password = document.getElementById('password').value;
+let country = document.getElementById('country').value;
+let signmeup = document.getElementById('signmeup').checked;
+let malebutt = document.getElementById('malebutt').checked;
+let femalebutt = document.getElementById('femalebutt').checked;
+let reset = document.getElementById('resetId').value;
+
+
+<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>
