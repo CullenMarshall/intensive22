@@ -1,0 +1,148 @@
+<?php
+session_start();
+include 'fetch_messages.php';
+
+
+// Handle the chat form submission
+if (isset($_POST['message'])) {
+    // Prepare the message
+    $message = sprintf("%s|%s|%s\n", $_SESSION['username'], $_POST['message'], date('Y-m-d H:i:s'));
+
+    // Append the message to the file
+    file_put_contents('messages.txt', $message, FILE_APPEND);
+}
+
+// Read the contents of messages.txt
+$contents = file_get_contents('messages.txt');
+$messages = explode("\n", $contents);
+?>
+
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="style.css">
+<html>
+
+<body>
+
+    <div class="container">
+        <div class="chatArea">
+            <h1>Chat</h1>
+            <div id="chatbox">
+                <!-- box for messages -->
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    fetch('fetch_messages.php')
+                        .then(response => response.json())
+                        .then(messages => {
+                            for (let i = 0; i < messages.length; i++) {
+                                let message = messages[i];
+                                let messageElement = document.createElement('p');
+                                messageElement.innerHTML = '<strong>' + message.username + '</strong>: ' + message.message + ' <span class="timestamp">' + message.timestamp + '</span>';
+                                document.getElementById('chatbox').appendChild(messageElement);
+                            }
+                        })
+                        .catch(error => console.error('Error:', error));
+                });
+            </script>
+
+            <div class="chatMessages">
+                <?php if (isset($_SESSION['username'])) : ?>
+                    <!-- Display the chat form if the user is logged in -->
+                    <form method="post" action="" id="chatForm">
+                        <label class="messageInput" for="message">Message:</label>
+                        <input type="text" class="messageInput" id="message" name="message" required></input>
+                        <input class="messageInput" type="submit" value="Send" id="sendButton">
+                    </form>
+                <?php else : ?>
+                    <!-- Display a login link if the user is not logged in -->
+                    <p>You must <a href="login.php">log in</a> to chat.</p>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+    <button onclick="window.location.href='login.php'">Log Out</button>
+    <script>
+        document.getElementById('chatForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let messageInput = document.getElementById('message');
+            let message = {
+                username: '<?php echo $_SESSION['username']; ?>',
+                timestamp: new Date().toISOString(),
+                message: messageInput.value
+            };
+            // Add the new message to the chatbox
+            let chatbox = document.getElementById('chatbox');
+            let p = document.createElement('p');
+            let username = document.createElement('strong');
+            username.textContent = message.username;
+            let timestamp = document.createElement('em');
+            timestamp.textContent = ` (${message.timestamp})`;
+            p.appendChild(username);
+            p.appendChild(timestamp);
+            p.appendChild(document.createTextNode(`: ${message.message}`));
+            chatbox.appendChild(p);
+            chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
+            // Clear the message input
+            messageInput.value = '';
+            // Send the new message to the server
+            fetch('send_message.php', {
+                    method: 'POST',
+                    body: JSON.stringify(message),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+    method: 'POST',
+    headers: {
+    'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(message)
+    });
+    });
+
+    let lastMessageTimestamp = null;
+    // gets messages from the server to update the chat
+    setInterval(function() {
+    fetch('fetch_messages.php')
+    .then(response => response.json())
+    .then(messages => {
+    let chatbox = document.getElementById('chatbox');
+    for (let message of messages) {
+    // Only add messages that haven't been added yet
+    if (lastMessageTimestamp === null || message.timestamp > lastMessageTimestamp) {
+    let p = document.createElement('p');
+    let username = document.createElement('strong');
+    username.textContent = message.username;
+    let timestamp = document.createElement('em');
+    timestamp.textContent = ` (${message.timestamp})`;
+    p.appendChild(username);
+    p.appendChild(timestamp);
+    p.appendChild(document.createTextNode(`: ${message.message}`));
+    chatbox.appendChild(p);
+    lastMessageTimestamp = message.timestamp;
+    }
+    }
+    chatbox.scrollTop = chatbox.scrollHeight; // Keeps scroll bar on bottom
+    });
+    }, 5000); // Fetch new messages every 5 seconds
+
+    // user names are different colors
+    let username = document.createElement('strong');
+    username.textContent = message.username;
+    let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    username.style.color = randomColor;
+    </script>
+
+</body>
+
+</html>
+
+<!--Displaying a login link if the user is not logged in.
+Adding a logout button.
+Adding an event listener to the chat form that prevents the form from being submitted in the traditional way (which would cause a page reload), and instead creates a new message object when the form is submitted.  -->

@@ -59,7 +59,7 @@ $title = filter_input(INPUT_GET, 'title', FILTER_SANITIZE_STRING);
             align-items: center;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.2);
             font-size: 60px;
             color: #FFAA07;
             text-shadow: #1140AA 2px 2px;
